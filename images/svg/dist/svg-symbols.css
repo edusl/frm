@@ -1,0 +1,65 @@
+.icon--close {
+  width: 100px;
+  height: 100px;
+}
+
+.icon--config {
+  width: 20px;
+  height: 20px;
+}
+
+.icon--hot {
+  width: 32px;
+  height: 32px;
+}
+
+.icon--logout {
+  width: 24px;
+  height: 24px;
+}
+
+.icon--mail {
+  width: 32px;
+  height: 32px;
+}
+
+.icon--members {
+  width: 24px;
+  height: 24px;
+}
+
+.icon--menu {
+  width: 25px;
+  height: 25px;
+}
+
+.icon--new {
+  width: 24px;
+  height: 24px;
+}
+
+.icon--own {
+  width: 512px;
+  height: 512px;
+}
+
+.icon--start {
+  width: 24px;
+  height: 24px;
+}
+
+.icon--team {
+  width: 27px;
+  height: 31px;
+}
+
+.icon--unread {
+  width: 32px;
+  height: 32px;
+}
+
+.icon--user {
+  width: 16px;
+  height: 16px;
+}
+

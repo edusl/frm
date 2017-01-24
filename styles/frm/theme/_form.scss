@@ -1,0 +1,136 @@
+/* --------------------------------------------------------------
+	$Form
+-------------------------------------------------------------- */
+
+
+.inputbox {
+  border: none;
+  padding: .4rem .6rem;
+  border: 1px solid $input-border;
+
+  &:focus {
+    border: 1px solid darken($input-border, 50%);
+    outline: none;
+  }
+}
+
+select {
+  padding: .4rem .6rem;
+}
+
+
+
+fieldset {
+  dl {
+    margin-bottom: 1rem;
+  }
+}
+
+
+.btn {
+  padding: .4rem .8rem;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+  .btn--primary {
+    background: $brand-fourth;
+    color: $brand-second-text;
+
+    &:hover {
+      background: lighten($brand-fourth, 20%);
+      color: $brand-second-text;
+    }
+  }
+
+
+  .btn--secondary {
+    background: $brand-third;
+    color: $brand-first-text;
+  }
+
+
+  .btn--pagination {
+    padding: .2rem .6rem;
+
+    background: $brand-second;
+    color: $brand-first-text;
+  }
+
+
+
+.fields {
+  margin-bottom: 1rem;
+
+  dl {
+    margin-bottom: 1rem;
+  }
+
+}
+
+
+
+
+
+
+/* --------------------------------------------------------------
+	$Tabs
+-------------------------------------------------------------- */
+
+
+.tabs {
+}
+
+  .tabs__item {
+    display: inline-block;
+  }
+
+    .tabs__item--active {
+
+      .tabs__link {
+        background: $brand-second;
+        color: $brand-first-text;
+
+        &:hover,
+        &:focus {
+          background: $brand-second;
+          color: $brand-first-text;
+        }
+      }
+    }
+
+  .tabs__link {
+    display: block;
+    padding: .3rem .5rem;
+    background: $brand-fourth;
+    color: $brand-second-text;
+
+    &:hover,
+    &:focus {
+      background: lighten($brand-fourth, 10%);
+      color: white;
+      text-decoration: none;
+    }
+
+  }
+
+
+
+  .button {
+    background: $brand-first;
+  }
+
+
+
+
+.message-box {
+  width: 100%;
+  textarea {
+    width: 100%;
+  }
+}

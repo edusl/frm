@@ -1,0 +1,769 @@
+/* --------------------------------------------------------------
+	$Main
+-------------------------------------------------------------- */
+
+header {
+  .header {
+    //background: $brand-fith;
+    background:#666;
+    width: 100%;
+    position: fixed;
+    z-index: 7;
+    top: 0;
+    font-size: .75em;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+
+  .header__inner {
+    height: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1440px;
+    margin: 0 auto;
+    //background: darken($brand-fith, 5%);
+    background: #111;
+  }
+
+
+  .header__icon {
+    width: 24px;
+    height: 24px;
+    fill: white;
+    margin: 0 1em;
+    cursor: pointer;
+    display: block;
+  }
+
+    .header__description {
+      display: flex;
+      align-items: center;;
+    }
+
+      .header__title {
+        font-family: $font-family-custom;
+        font-size: rem(18);
+
+        .logo {
+          color: $brand-second-text;
+        }
+
+        span {
+          color: $brand-third;
+        }
+      }
+
+  .header__user {
+  }
+
+    .user-list {
+      color: $brand-second-text;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      a {
+        color: $brand-third;
+      }
+
+
+      .icon {
+        fill: white;
+        width: 24px;
+        height: 24px;
+      }
+
+      .link--profile span {
+        color: white!important;
+        font-weight: bold;
+      }
+
+
+      .avatar {
+        max-height: 50px;
+        width: auto;
+      }
+    }
+
+      .user-list__item--text {
+        display: none;
+        padding: 0 .5rem;
+
+      }
+
+      .user-list__item {
+
+        &:hover {
+          background: #FFCB0A;
+          .link--profile span,
+          .icon {
+            fill: #5F4B04;
+            color: #5F4B04!important;
+          }
+        }
+      }
+
+      .user-list__item--Logout {
+          display: none;
+      }
+
+      @include responsive(tablet) {
+        .user-list__item--Logout,
+        .user-list__item--text {
+          display: block;
+        }
+
+        .user-list__item--Login {
+          //display: none;
+        }
+      }
+
+      .user-list__link {
+          padding: 0 10px;
+          height: 4em;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      }
+
+        .hover_rotate {
+          &:hover {
+            transform: rotate(180deg);
+            transition-duration: .5s;
+            transition-delay: now;
+            }
+        }
+
+        .user-list__link--Logout {
+        }
+
+        .user-list__link--Login {
+        }
+
+
+      .user-list__item--logout {
+        background: green;
+        color: white;
+      }
+
+
+
+      @include responsive(tablet) {
+        header {
+          .header {
+            font-size: 1em;
+          }
+        }
+      }
+
+
+
+
+
+
+
+html {
+  background: lighten($brand-fith, 10%);
+}
+
+.wrap {
+  background: lighten($brand-first, 80%);
+}
+
+main {
+  background: white;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  box-shadow: 0 0 3px $brand-first;
+  margin-top: 3rem;
+}
+
+  @include responsive(tablet) {
+    main {
+        font-size: 1em;
+        margin-top: 4rem;
+    }
+    .showcookies main {
+      margin-top: 7rem;
+    }
+  }
+
+footer {
+  background: darken($brand-fith, 1%);
+
+}
+
+@media only screen and (max-width: 500px) {
+
+  .top-header {
+    font-size: .75em;
+  }
+
+  .top-header__icon {
+    width: 2em;
+    height: 2em;
+  }
+
+}
+
+/* --------------------------------------------------------------
+	$Sidebar
+-------------------------------------------------------------- */
+
+.sidebar {
+  background: darken(#FFFFFF, 5%);
+  //background: darken($brand-first, 50%);
+  height: 100%;
+  width: 17rem;
+  margin-left: -17rem;
+  overflow: hidden;
+  position: fixed;
+  -webkit-transition: margin-left .5s; /* Safari */
+  transition: margin-left .5s;
+  z-index: 10;
+  top: 0;
+
+  overflow-y: scroll;
+}
+.sidebar::-webkit-scrollbar { width: 0 !important }
+.sidebar { -ms-overflow-style: none; }
+
+
+
+  .sidebar__list {
+    margin-bottom: 1rem;
+  }
+
+  .sidebar__icon {
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+    fill: lighten(#000000, 20%);
+    color: white;
+  }
+
+  .sidebar__avatar {
+    //background: #000;
+    text-align: center;
+    padding: .5rem;
+
+    .avatar {
+      margin-bottom: .5rem;
+
+    }
+
+
+    .sidebar__avatar--no {
+      fill: $brand-fourth;
+      width: 128px;
+      height: 128px;
+    }
+  }
+
+  .sidebar__config {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    left: 1rem;
+    top: 1rem;
+    fill: #ffffff!important;
+
+  }
+
+  .sidebar__nick span {
+    color: $brand-third !important;
+    font-size: 1.4rem;
+    border-bottom: 1px dotted white;
+    display: block;
+    line-height: 2rem;
+  }
+
+  .sidebar__item {
+    border-bottom: 1px solid #E7E7E7;
+
+
+      a {
+        color: $brand-first-text;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        line-height: 1rem;
+        padding-left: .5rem;
+
+        span {
+          padding-left: .3rem;
+        }
+        &:hover {
+          background: darken(#FFFFFF, 10%);
+        }
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+  }
+
+    .sidebar__item--Login {
+      background: $color-ok;
+
+      a:hover {
+        background: darken($color-ok, 10%);
+      }
+    }
+
+    .sidebar__item--Logout {
+      background: $color-error;
+
+    a:hover {
+        background: darken($color-error, 10%);
+      }
+    }
+
+
+/* click open menu */
+
+.openmenu {
+
+  .overflowrap {
+    display: block!important;
+    opacity: .7;
+  }
+
+  .sidebar {
+    margin-left: 0;
+    box-shadow: 0px 0px 25px #222;
+  }
+
+}
+
+
+.overflowrap {
+  background: #000;
+  height: 100%;
+  width: 100%;
+  z-index: 9;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: none;
+}
+
+/* --------------------------------------------------------------
+	$Main header
+-------------------------------------------------------------- */
+
+.main-header {
+  position: relative;
+  background: $brand-fourth;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 60px;
+}
+
+  @include responsive(tablet) {
+    .main-header {
+        display: block;
+        height: 120px;
+    }
+
+    .forum-4 {
+      background: url('../../../images/top/top2.jpg');
+    }
+
+    .forum-0 {
+      background: url('../../../images/header/top1.jpg');
+    }
+
+  }
+
+
+
+
+/* --------------------------------------------------------------
+	$Search box
+-------------------------------------------------------------- */
+
+
+.search-box {
+  padding: 0 .75rem .5rem .5rem;
+  position: relative;
+}
+
+  .search__input {
+    width: 100%;
+    border: none;
+    padding: .5rem;
+    background: white;
+  }
+
+  .search__button {
+    position: absolute;
+    top: .5rem;
+  }
+
+  .search__link {
+    font-size: .75rem;
+    color: $brand-third;
+  }
+
+
+.open__menu {
+  fill: $brand-second;
+  width: 32px;
+  height: 32px;
+  margin: 0 1rem;
+}
+
+
+
+/* --------------------------------------------------------------
+	$Page body
+-------------------------------------------------------------- */
+
+
+.page-body {
+  padding: 1rem 1rem 0 1rem;
+  overflow: hidden;
+  // background: linear-gradient(to bottom, white, #eee);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background: white;
+}
+
+
+/* --------------------------------------------------------------
+	$Page footer
+-------------------------------------------------------------- */
+
+.footer {
+  background: darken($brand-fith, 5%);
+  box-shadow: 0 4px 16px #000;
+  font-size: .875em;
+  max-width: 1440px;
+  margin: 0 auto;
+  color: $brand-second-text;
+
+
+  a {
+    color: lighten($brand-third, 30%);
+  }
+}
+
+  .footer__inner {
+    border-top: 15px solid $brand-third;
+    padding: 1rem;
+  }
+
+  .footer-nav {
+    margin-bottom: 1rem;
+  }
+
+
+/* --------------------------------------------------------------
+	$Copyright
+-------------------------------------------------------------- */
+
+.copyright {
+}
+
+
+
+
+/* --------------------------------------------------------------
+	$Nav bar
+-------------------------------------------------------------- */
+
+.navbar-breadcrumb {
+  display: none;
+  font-size: .875rem;
+  background: lighten($brand-first, 20%);
+  color: white;
+  padding: .5rem 1rem;
+
+  a {
+    color: white;
+  }
+}
+
+  @include responsive(tablet) {
+    .navbar-breadcrumb {
+        display: block;
+    }
+  }
+
+.nav-breadcrumbs {
+
+  .crumb {
+    display: inline-block;
+    margin-right: .3rem;
+
+
+    &::after {
+      padding-left: .5rem;
+      content: '|';
+    }
+
+    &:last-child::after {
+      content: '';
+    }
+  }
+}
+
+
+
+/* --------------------------------------------------------------
+	$Online list
+-------------------------------------------------------------- */
+
+.online-list {
+  background-color: $brand-second;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+
+.birthday-list {
+  background-color: $brand-second;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+.statistics {
+  background-color: $brand-second;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+/* --------------------------------------------------------------
+	$Login
+-------------------------------------------------------------- */
+
+.login-box {
+  background-color: $brand-second;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+
+
+.quick-login-box {
+  background-color: $brand-second;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+/* --------------------------------------------------------------
+	$Box
+-------------------------------------------------------------- */
+
+.box {
+  background-color: $brand-second;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+
+
+.action-bar {
+  border: 1px solid red;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+
+
+/* --------------------------------------------------------------
+	$Permissions
+-------------------------------------------------------------- */
+
+.permissions {
+  margin-bottom: 1rem;
+}
+
+
+
+/* --------------------------------------------------------------
+	$Pagination
+-------------------------------------------------------------- */
+
+
+
+/* --------------------------------------------------------------
+	$Jump box
+-------------------------------------------------------------- */
+
+
+#jumpbox {
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+  .jumpbox-cat-link {
+    display: none;
+
+  }
+
+  .jumpbox-sub-link {
+    float: left;
+    width: 33%;
+  }
+
+
+.jumpbox-return {
+  margin-bottom: 1rem;
+}
+
+
+
+/* --------------------------------------------------------------
+	$Messages
+-------------------------------------------------------------- */
+
+.msg {
+  background: $brand-first;
+  color: $brand-second-text;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+  .msg--error {
+    background: $color-error;
+  }
+
+
+
+/* --------------------------------------------------------------
+	$Cookies
+-------------------------------------------------------------- */
+
+.showcookies {
+  main {
+    margin-top: 6em;
+  }
+
+  #cookies {
+    height: 3rem;
+
+  }
+}
+
+
+
+#cookies {
+	background: $brand-third;
+	//padding: .5em 1rem;
+  height: 0;
+  overflow: hidden;
+  line-height: 1rem;
+  align-items: center;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+  .cookies__icon {
+    width: 3em;
+    height: 3em;
+    float: left;
+    cursor: pointer;
+    margin-right: .5rem;
+  }
+
+
+  @include responsive(tablet) {
+    .cookies__icon {
+      width: 2em;
+      height: 2em;
+    }
+  }
+
+
+
+
+
+
+
+#id-memberlist{
+ .main-header {
+   display: none;
+ }
+ #page-body {
+  padding: 0;
+
+  .bg2 {
+    padding: 1rem;
+  }
+}
+}
+
+
+.column1 {
+
+}
+
+.column2 {
+
+}
+
+@include responsive(tablet) {
+  .column1, .column2 {
+    width: 50%;
+    float: left;
+  }
+}
+
+
+.details {
+  dt {
+    font-weight: bold;
+    font-size: 90%;
+  }
+  dd {
+    margin-bottom: .5rem;
+
+  }
+}
+
+
+.profile-avatar {
+background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NiIgaGVpZ2h0PSIxMDAiPgo8cmVjdCB3aWR0aD0iNTYiIGhlaWdodD0iMTAwIiBmaWxsPSIjMkYyNzM1Ij48L3JlY3Q+CjxwYXRoIGQ9Ik0yOCA2NkwwIDUwTDAgMTZMMjggMEw1NiAxNkw1NiA1MEwyOCA2NkwyOCAxMDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzNDMzI0NCIgc3Ryb2tlLXdpZHRoPSI0Ij48L3BhdGg+CjxwYXRoIGQ9Ik0yOCAwTDI4IDM0TDAgNTBMMCA4NEwyOCAxMDBMNTYgODRMNTYgNTBMMjggMzQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzRDM0Y1NiIgc3Ryb2tlLXdpZHRoPSI0Ij48L3BhdGg+Cjwvc3ZnPg==");
+
+
+ padding: 1rem;
+  color: $brand-second-text;
+  text-align: center;
+  .avatar {
+    margin-bottom: 2rem;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* LINKS */

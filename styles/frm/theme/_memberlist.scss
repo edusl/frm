@@ -1,0 +1,58 @@
+/* --------------------------------------------------------------
+	$Memberlist
+-------------------------------------------------------------- */
+
+#id-memberlist{
+ .main-header {
+   display: none;
+ }
+ #page-body {
+  padding: 0;
+
+  .bg2 {
+    padding: 1rem;
+  }
+}
+}
+
+
+.column1 {
+
+}
+
+.column2 {
+
+}
+
+@include responsive(tablet) {
+  .column1, .column2 {
+    width: 50%;
+    float: left;
+  }
+}
+
+
+.details {
+  dt {
+    font-weight: bold;
+    font-size: 90%;
+  }
+  dd {
+    margin-bottom: .5rem;
+
+  }
+}
+
+
+.profile-avatar {
+background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NiIgaGVpZ2h0PSIxMDAiPgo8cmVjdCB3aWR0aD0iNTYiIGhlaWdodD0iMTAwIiBmaWxsPSIjMkYyNzM1Ij48L3JlY3Q+CjxwYXRoIGQ9Ik0yOCA2NkwwIDUwTDAgMTZMMjggMEw1NiAxNkw1NiA1MEwyOCA2NkwyOCAxMDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzNDMzI0NCIgc3Ryb2tlLXdpZHRoPSI0Ij48L3BhdGg+CjxwYXRoIGQ9Ik0yOCAwTDI4IDM0TDAgNTBMMCA4NEwyOCAxMDBMNTYgODRMNTYgNTBMMjggMzQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzRDM0Y1NiIgc3Ryb2tlLXdpZHRoPSI0Ij48L3BhdGg+Cjwvc3ZnPg==");
+
+
+ padding: 1rem;
+  color: $brand-second-text;
+  text-align: center;
+  .avatar {
+    margin-bottom: 2rem;
+  }
+
+}

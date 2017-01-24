@@ -1,0 +1,78 @@
+/* --------------------------------------------------------------
+	$Body
+-------------------------------------------------------------- */
+
+
+
+
+.time-box {
+  background: $brand-first;
+  color: white;
+  font-size: 0.75rem;
+
+  display: inline-block;
+  padding: .2rem .5rem;
+}
+
+
+
+
+
+
+.forums {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .row {
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+
+    @include responsive(tablet) {
+        width: 50%;
+        height: 12rem;
+
+        &:nth-child(odd) .row__inner {
+          margin-right: .5rem;
+        }
+
+        &:nth-child(even) .row__inner {
+          margin-left: .5rem;
+        }
+    }
+
+
+
+    .row-item {
+      padding: 1rem;
+      border: 1px solid red;
+      background-color: rgba(256,256,256,0.7);
+    }
+
+    .topics {
+      width: 10rem;
+    }
+
+    .lastpost {
+      font-size: .7rem;
+    }
+  }
+
+  .row__inner {
+    border: 1px solid blue;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+}
+
+
+  .forumtitle {
+    font-size: 2rem;
+    color: $brand-first;
+  }
+
+  .forum-desc {
+    font-size: .85rem;
+  }

@@ -1,0 +1,72 @@
+/* --------------------------------------------------------------
+	$Ucp
+-------------------------------------------------------------- */
+
+.ucp-title {
+  margin-bottom: 1rem;
+}
+
+.ucp-subtitle {
+  border: 1px solid red;
+}
+
+/* --------------------------------------------------------------
+	$Panel
+-------------------------------------------------------------- */
+
+.panel {
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.panel__inner {
+  background: $brand-second;
+  padding: 1rem;
+  overflow: hidden;
+
+}
+
+.cp-menu {
+  margin-bottom: 1rem;
+
+  .navigation {
+    li {
+      margin-bottom: .5rem;
+    }
+  }
+}
+
+.cp-main {
+}
+
+.menu-mobile {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.menu-desktop {
+  display: none;
+}
+
+
+
+  @include responsive(tablet) {
+
+    .menu-mobile {
+      display: none;
+    }
+    .menu-desktop {
+      display: block;
+    }
+
+    .cp-menu {
+      width: 15%;
+      float: left;
+    //  border: 1px solid pink;
+    }
+
+    .cp-main {
+      width: 85%;
+      float: right;
+    }
+  }

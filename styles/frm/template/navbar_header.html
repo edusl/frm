@@ -1,0 +1,23 @@
+<div class="navbar navbar-breadcrumb" role="navigation">
+	<div class="inner">
+
+	<ol id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+		<!-- DEFINE $MICRODATA = ' itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""' -->
+		<!-- EVENT overall_header_breadcrumbs_before -->
+			<!-- IF U_SITE_HOME -->
+				<li class="crumb" {$MICRODATA}><a href="{U_SITE_HOME}" itemprop="url" data-navbar-reference="home"><span itemprop="title">{L_SITE_HOME}</span></a></li>
+			<!-- ENDIF -->
+			<!-- EVENT overall_header_breadcrumb_prepend -->
+				<li class="crumb" {$MICRODATA}><a href="{U_INDEX}" itemprop="url" accesskey="h" data-navbar-reference="index"><!-- IF not U_SITE_HOME --><!-- ENDIF --><span itemprop="title">{L_INDEX}</span></a></li>
+
+			<!-- BEGIN navlinks -->
+				<!-- EVENT overall_header_navlink_prepend -->
+				<li class="crumb" {$MICRODATA}<!-- IF navlinks.MICRODATA --> {navlinks.MICRODATA}<!-- ENDIF -->><a href="{navlinks.U_VIEW_FORUM}" itemprop="url"><span itemprop="title">{navlinks.FORUM_NAME}</span></a></li>
+				<!-- EVENT overall_header_navlink_append -->
+			<!-- END navlinks -->
+			<!-- EVENT overall_header_breadcrumb_append -->
+		<!-- EVENT overall_header_breadcrumbs_after -->
+	</ol>
+
+	</div>
+</div>

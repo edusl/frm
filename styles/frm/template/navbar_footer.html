@@ -1,0 +1,33 @@
+<ul class="footer-nav">
+
+	<!-- IF not S_IS_BOT -->
+		<li class="rightside">
+			<a href="{U_DELETE_COOKIES}" data-ajax="true" data-refresh="true" role="menuitem">
+				<span>{L_DELETE_COOKIES}</span>
+			</a>
+		</li>
+		<!-- IF S_DISPLAY_MEMBERLIST -->
+			<li class="rightside">
+				<a href="{U_MEMBERLIST}" title="{L_MEMBERLIST_EXPLAIN}" role="menuitem">
+					<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>{L_MEMBERLIST}</span>
+				</a>
+			</li>
+		<!-- ENDIF -->
+	<!-- ENDIF -->
+	<!-- EVENT overall_footer_teamlink_before -->
+	<!-- IF U_TEAM -->
+		<li class="footer-nav__item">
+			<a href="{U_TEAM}" role="menuitem">
+				<span>{L_THE_TEAM}</span>
+			</a>
+		</li>
+	<!-- ENDIF -->
+	<!-- EVENT overall_footer_teamlink_after -->
+	<!-- IF U_CONTACT_US -->
+		<li class="footer-nav__item">
+			<a href="{U_CONTACT_US}" role="menuitem">
+				<span>{L_CONTACT_US}</span>
+			</a>
+		</li>
+	<!-- ENDIF -->
+</ul>

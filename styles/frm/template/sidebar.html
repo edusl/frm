@@ -1,0 +1,191 @@
+<div class="overflowrap"></div>
+<div class="sidebar">
+	<a id="topsidebar" class="anchor" accesskey="z"></a>
+
+	<div class="top-header__bar"></div>
+	<!-- EVENT navbar_header_user_profile_prepend -->
+		<!-- IF S_USER_LOGGED_IN -->
+			<div class="sidebar__avatar">
+				<!-- IF CURRENT_USER_AVATAR -->
+					{CURRENT_USER_AVATAR}
+				<!-- ELSE -->
+					<svg role="img" class="sidebar__avatar--no" title="Sin avatar"><use xlink:href="images/svg/dist/svg-symbols.svg#user"></use></svg>
+				<!-- ENDIF -->
+
+				<!-- EVENT navbar_header_username_prepend -->
+				<p class="sidebar__nick"><strong>{CURRENT_USERNAME_SIMPLE}</strong></p>
+				<!-- EVENT navbar_header_username_append -->
+
+			</div>
+		<!-- ENDIF -->
+	<!-- EVENT navbar_header_user_profile_append -->
+
+
+	<!-- navigation menu -->
+	<nav>
+		<ul class="sidebar__list" role="menu">
+			<!-- EVENT navbar_header_quick_links_before -->
+
+
+				<!-- EVENT navbar_header_profile_list_before -->
+				<!-- IF S_USER_LOGGED_IN -->
+					<!-- <li class="sidebar__item">
+						<a href="{U_PROFILE}" title="{L_PROFILE}" role="menuitem">
+							<span>{L_PROFILE}</span>
+						</a>
+					</li>
+					<li class="sidebar__item">
+						<a href="{U_USER_PROFILE}" title="{L_READ_PROFILE}" role="menuitem">
+							<span>{L_READ_PROFILE}</span>
+						</a>
+					</li> -->
+				<!-- ENDIF -->
+
+					<!-- EVENT navbar_header_profile_list_after -->
+
+			<!-- IF S_DISPLAY_SEARCH -->
+				<!-- IF S_REGISTERED_USER -->
+					<li class="sidebar__item">
+						<a href="{U_SEARCH_SELF}" role="menuitem">
+              <svg role="img" class="sidebar__icon" title="{L_SEARCH_ACTIVE_TOPICS}"><use xlink:href="images/svg/dist/svg-symbols.svg#own"></use></svg>
+							<span>{L_SEARCH_SELF}</span>
+						</a>
+					</li>
+				<!-- ENDIF -->
+				<!-- IF S_USER_LOGGED_IN -->
+					<li class="sidebar__item">
+						<a href="{U_SEARCH_NEW}" role="menuitem">
+              <svg role="img" class="sidebar__icon" title="{L_SEARCH_ACTIVE_TOPICS}"><use xlink:href="images/svg/dist/svg-symbols.svg#new"></use></svg>
+							<span>{L_SEARCH_NEW}</span>
+						</a>
+					</li>
+				<!-- ENDIF -->
+				<!-- IF S_LOAD_UNREADS -->
+					<li class="sidebar__item">
+						<a href="{U_SEARCH_UNREAD}" role="menuitem">
+							<svg role="img" class="sidebar__icon" title="{L_SEARCH_UNREAD}"><use xlink:href="images/svg/dist/svg-symbols.svg#unread"></use></svg>
+							<span>{L_SEARCH_UNREAD}</span>
+						</a>
+					</li>
+				<!-- ENDIF -->
+					<li class="sidebar__item">
+						<a href="{U_SEARCH_UNANSWERED}" role="menuitem">
+							<svg role="img" class="sidebar__icon" title="{L_SEARCH_UNANSWERED}"><use xlink:href="images/svg/dist/svg-symbols.svg#new"></use></svg>
+							<span>{L_SEARCH_UNANSWERED}</span>
+						</a>
+					</li>
+
+					<li class="sidebar__item">
+						<a href="{U_SEARCH_ACTIVE_TOPICS}" role="menuitem">
+              <svg role="img" class="sidebar__icon" title="{L_SEARCH_ACTIVE_TOPICS}"><use xlink:href="images/svg/dist/svg-symbols.svg#hot"></use></svg>
+							<span>{L_SEARCH_ACTIVE_TOPICS}</span>
+						</a>
+					</li>
+			<!-- ENDIF -->
+
+			<!-- IF S_DISPLAY_PM -->
+				<li class="sidebar__item">
+					<a href="{U_PRIVATEMSGS}" role="menuitem">
+            <svg role="img" class="sidebar__icon" title="{L_SEARCH_ACTIVE_TOPICS}"><use xlink:href="images/svg/dist/svg-symbols.svg#mail"></use></svg>
+						<span>{L_PRIVATE_MESSAGES} [<strong>{PRIVATE_MESSAGE_COUNT}</strong>]</span>
+					</a>
+				</li>
+			<!-- ENDIF -->
+
+				<li class="sidebar__item">
+					<a href="{U_VIEW_ALL_NOTIFICATIONS}" id="notification_list_button" class="dropdown-trigger">
+            <svg role="img" class="sidebar__icon" title=""><use xlink:href="images/svg/dist/svg-symbols.svg#own"></use></svg>
+						<span>{L_NOTIFICATIONS} </span><strong class="badge<!-- IF not NOTIFICATIONS_COUNT --> hidden<!-- ENDIF -->">{NOTIFICATIONS_COUNT}</strong>
+					</a>
+				</li>
+
+			<!-- IF U_RESTORE_PERMISSIONS -->
+				<li>
+					<a href="{U_RESTORE_PERMISSIONS}">
+						<span>{L_RESTORE_PERMISSIONS}</span>
+					</a>
+				</li>
+			<!-- ENDIF -->
+
+			<!-- IF not S_IS_BOT and (S_DISPLAY_MEMBERLIST or U_TEAM) -->
+				<!-- IF S_DISPLAY_MEMBERLIST -->
+					<li class="sidebar__item">
+						<a href="{U_MEMBERLIST}" role="menuitem">
+              <svg role="img" class="sidebar__icon" title="{L_SEARCH_ACTIVE_TOPICS}"><use xlink:href="images/svg/dist/svg-symbols.svg#members"></use></svg>
+							<span>{L_MEMBERLIST}</span>
+						</a>
+					</li>
+				<!-- ENDIF -->
+				<!-- IF U_TEAM -->
+					<li class="sidebar__item">
+						<a href="{U_TEAM}" role="menuitem">
+              <svg role="img" class="sidebar__icon" title="{L_SEARCH_ACTIVE_TOPICS}"><use xlink:href="images/svg/dist/svg-symbols.svg#team"></use></svg>
+							<span>{L_THE_TEAM}</span>
+						</a>
+					</li>
+				<!-- ENDIF -->
+			<!-- ENDIF -->
+
+
+			<!-- IF S_USER_LOGGED_OUT -->
+			<li class="sidebar__item sidebar__item--out">
+				<a href="{U_LOGIN_LOGOUT}" title="{L_LOGIN_LOGOUT}" accesskey="x" role="menuitem">
+          <svg role="img" class="sidebar__icon" title="{L_SEARCH_ACTIVE_TOPICS}"><use xlink:href="images/svg/dist/svg-symbols.svg#connect"></use></svg>
+					<span>{L_LOGIN_LOGOUT}</span>
+				</a>
+			</li>
+			<!-- ELSE  -->
+			<li class="sidebar__item sidebar__item--in">
+				<a href="{U_LOGIN_LOGOUT}" title="{L_LOGIN_LOGOUT}" accesskey="x" role="menuitem">
+          <svg role="img" class="sidebar__icon" title="{L_SEARCH_ACTIVE_TOPICS}"><use xlink:href="images/svg/dist/svg-symbols.svg#logout"></use></svg>
+					<span>{L_LOGIN_LOGOUT}</span>
+				</a>
+			</li>
+			<!-- ENDIF -->
+
+
+
+			<!-- IF S_REGISTER_ENABLED and not (S_SHOW_COPPA or S_REGISTRATION) -->
+				<!-- IF S_USER_LOGGED_OUT -->
+
+				<li class="sidebar__item" data-skip-responsive="true">
+					<a href="{U_REGISTER}" role="menuitem">
+						<span>{L_REGISTER}</span>
+					</a>
+				</li>
+				<!-- ENDIF -->
+
+			<!-- ENDIF -->
+			<!-- EVENT navbar_header_logged_out_content -->
+
+			<!-- EVENT navbar_header_quick_links_after -->
+
+			<!-- EVENT navbar_header_logged_out_content -->
+		</ul>
+	</nav>
+
+
+	<!-- EVENT overall_header_searchbox_before -->
+	<!-- IF S_DISPLAY_SEARCH and not S_IN_SEARCH -->
+	<div id="search-box" class="search-box" role="search">
+		<form action="{U_SEARCH}" method="get" id="search" class="search">
+		<fieldset>
+			<input name="keywords" id="keywords" type="search" maxlength="128" title="{L_SEARCH_KEYWORDS}" class="search__input" size="20" value="{SEARCH_WORDS}" placeholder="{L_SEARCH_MINI}" />
+			<button class="search__button invisible" type="submit" title="{L_SEARCH}">
+				<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">{L_SEARCH}</span>
+			</button>
+			<a href="{U_SEARCH}" class="search__link" title="{L_SEARCH_ADV}">
+				<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">{L_SEARCH_ADV}</span>
+			</a>
+			{S_SEARCH_HIDDEN_FIELDS}
+		</fieldset>
+		</form>
+	</div>
+	<!-- ENDIF -->
+	<!-- EVENT overall_header_searchbox_after -->
+
+	<div class="time-box">
+		<!-- IF S_USER_LOGGED_IN --><p>{LAST_VISIT_DATE}<p><!-- ENDIF -->
+	</div>
+
+</div><!-- sidebar --->

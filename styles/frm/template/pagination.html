@@ -1,0 +1,15 @@
+<ul class="topic-pagination">
+<!-- BEGIN pagination -->
+	<!-- IF pagination.S_IS_PREV -->
+		<li class="topic-pagination__item topic-pagination__item--previous"><a class="btn" href="{pagination.PAGE_URL}" rel="prev" role="button"><span>{L_PREVIOUS}</span></a></li>
+	<!-- ELSEIF pagination.S_IS_CURRENT -->
+	<li class="topic-pagination__item topic-pagination__item--active"><span>{pagination.PAGE_NUMBER}</span></li>
+	<!-- ELSEIF pagination.S_IS_ELLIPSIS -->
+	<li class="topic-pagination__item topic-pagination__item--ellipsis" role="separator"><span>{L_ELLIPSIS}</span></li>
+	<!-- ELSEIF pagination.S_IS_NEXT -->
+		<li class="topic-pagination__item topic-pagination__item--next"><a class="btn button-icon-only" href="{pagination.PAGE_URL}" rel="next" role="button"><span>{L_NEXT}</span></a></li>
+	<!-- ELSE -->
+		<li class="topic-pagination__item"><a class="btn btn--primary" href="{pagination.PAGE_URL}" role="button">{pagination.PAGE_NUMBER}</a></li>
+	<!-- ENDIF -->
+<!-- END pagination -->
+</ul>

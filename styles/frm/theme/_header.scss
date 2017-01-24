@@ -1,0 +1,45 @@
+/* --------------------------------------------------------------
+	$Headers
+-------------------------------------------------------------- */
+
+
+
+.h2 {
+  margin-bottom: 1em;
+}
+
+.h3 {
+  margin-bottom: 1em;
+}
+
+
+.forum-title {
+  position: absolute;
+  margin-bottom: 0;
+  bottom: 1rem;
+  left: 1rem;
+  color: white;
+
+  a {
+    color: #fff;
+  }
+}
+
+.topic-title {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  line-height: 100%;
+}
+
+  @include responsive(tablet) {
+    .forum-title {
+      font-size: 2rem;
+      line-height: 100%;
+      text-shadow: 0 0 5px #000;
+    }
+
+    .topic-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+  }
