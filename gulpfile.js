@@ -14,7 +14,7 @@ var uglify = require('gulp-uglify');
 gulp.task('serve', ['sass'], function() {
 
     browserSync.init({
-      proxy: "localhost/phpbb32"
+      proxy: "localhost/frm"
     });
 
     gulp.watch("images/svg/*.*", ['svg-sprite']).on('change', browserSync.reload);
