@@ -145,7 +145,7 @@ Posts
 
 .posts {
 
-	font-size: 1.2rem;
+	//font-size: 1.2rem;
 
 	//
 	dfn {
@@ -186,14 +186,12 @@ Posts
 	}
 
 	.show-post-buttons {
-		margin-right: .2rem;
-
+		margin-right: 10px;
 		cursor: pointer;
-		fill: lighten($brand-first-text, 30%);
 
-		.post-buttons__icon {
-			width: 20px;
-			height: 20px;
+		.icon {
+			width: 24px;
+			height: 24px;
 		}
 
 		&:hover {
@@ -201,10 +199,16 @@ Posts
 		}
 	}
 
+	.post-options {
+		display: flex;
+		align-items: center;
+
+		.link {
+			fill: #999;
+		}
+	}
 	.post-buttons--quote {
-		position: absolute;
-		right: 0;
-		top: 0;
+
 	}
 
 
@@ -239,7 +243,7 @@ Posts
 
   dl {
     overflow: hidden;
-    margin-bottom: 1.5rem;
+    margin-bottom: 8px;
 		border-bottom: 1px dotted lighten($brand-first, 50);
 	}
 
@@ -281,12 +285,15 @@ Posts
 }
 
 
-	.author {
+	.post-head {
 		font-size: 80%;
 		border-bottom: 1px solid lighten($brand-first-text, 60%);
 		position: relative;
 		padding-bottom: .2rem;
 		color: lighten($brand-first-text, 40%);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 	}
 
 .list-inner {

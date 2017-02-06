@@ -47,7 +47,6 @@ header {
 
       .header__title {
         font-family: $font-family-custom;
-        font-size: rem(18);
 
         .logo {
           color: $brand-second-text;
@@ -330,6 +329,7 @@ footer {
 /* click open menu */
 
 .openmenu {
+
 
   .overflowrap {
     display: block!important;
@@ -760,10 +760,26 @@ background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vc
 
 
 
+/* --------------------------------------------------------------
+	$Navigation
+-------------------------------------------------------------- */
 
-
-
+#navigation {
+  border: 1px solid red;
+  li {
+    font-size: rem(12);
+  }
+}
 
 
 
 /* LINKS */
+
+
+/* --------------------------------------------------------------
+	$topiclist
+-------------------------------------------------------------- */
+
+.topiclist {
+  
+}

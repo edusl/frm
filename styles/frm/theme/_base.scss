@@ -34,11 +34,13 @@ $selection-text-color     : invert($brand-first) !default;
 // Typography
 $font-family-base         : "Arial", Helvetica, Sans-serif !default;
 $font-family-custom				: 'Yanone Kaffeesatz', sans-serif;
-$font-size-base           : 16px !default;
+$size-base           			: 16px !default;
 $line-height-base         : 22px !default;
 
+
+
 // Scaffolding
-$body-font-size           : $font-size-base !default;
+$body-font-size           : $size-base !default;
 $body-bg                  : white !default;
 $body-color               : #8F908A !default;
 
@@ -60,7 +62,7 @@ $input-border							: #ccc;
 
 /* Define your base font-size here; most elements will inherit this. _NO__DOTCOMMA__AFTER__*/
 html {
-	font-size: $font-size-base; /* Assuming 16px... */
+	font-size: $size-base; /* Assuming 16px... */
 	line-height: $line-height-base; /* 24px (This is now our magic number; all subsequent margin-bottoms and line-heights want to be a multiple of this number in order to maintain vertical rhythm.) _NO__DOTCOMMA__AFTER__*/
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }

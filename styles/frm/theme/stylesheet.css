@@ -439,6 +439,9 @@ textarea {
 	$breakpoint
 -------------------------------------------------------------- */
 /* --------------------------------------------------------------
+	$em-rem
+-------------------------------------------------------------- */
+/* --------------------------------------------------------------
 	$Base
 -------------------------------------------------------------- */
 /* Define your base font-size here; most elements will inherit this. _NO__DOTCOMMA__AFTER__*/
@@ -702,8 +705,7 @@ header .header a {
   align-items: center; }
 
 .header__title {
-  font-family: "Yanone Kaffeesatz", sans-serif;
-  font-size: rem(18); }
+  font-family: "Yanone Kaffeesatz", sans-serif; }
 
 .header__title .logo {
   color: #ffffff; }
@@ -1187,7 +1189,19 @@ footer {
 .profile-avatar .avatar {
   margin-bottom: 2rem; }
 
+/* --------------------------------------------------------------
+	$Navigation
+-------------------------------------------------------------- */
+#navigation {
+  border: 1px solid red; }
+
+#navigation li {
+  font-size: 0.75rem; }
+
 /* LINKS */
+/* --------------------------------------------------------------
+	$topiclist
+-------------------------------------------------------------- */
 /* --------------------------------------------------------------
 	$Body
 -------------------------------------------------------------- */
@@ -1349,9 +1363,6 @@ Posts
   width: 100%;
   margin-bottom: .5rem; }
 
-.posts {
-  font-size: 1.2rem; }
-
 .posts dfn {
   font-size: 70%; }
 
@@ -1377,21 +1388,26 @@ Posts
   vertical-align: middle; }
 
 .show-post-buttons {
-  margin-right: .2rem;
-  cursor: pointer;
-  fill: gray; }
+  margin-right: 10px;
+  cursor: pointer; }
 
-.show-post-buttons .post-buttons__icon {
-  width: 20px;
-  height: 20px; }
+.show-post-buttons .icon {
+  width: 24px;
+  height: 24px; }
 
 .show-post-buttons:hover {
   fill: #333333; }
 
-.post-buttons--quote {
-  position: absolute;
-  right: 0;
-  top: 0; }
+.post-options {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.post-options .link {
+  fill: #999; }
 
 .postbody:hover .post-buttons__link {
   opacity: 1; }
@@ -1404,7 +1420,7 @@ Posts
 -------------------------------------------------------------- */
 .topics dl {
   overflow: hidden;
-  margin-bottom: 1.5rem;
+  margin-bottom: 8px;
   border-bottom: 1px dotted #a9ac9d; }
 
 .topics .posts {
@@ -1432,12 +1448,21 @@ Posts
   margin-bottom: .25rem;
   color: gray; }
 
-.author {
+.post-head {
   font-size: 80%;
   border-bottom: 1px solid #cccccc;
   position: relative;
   padding-bottom: .2rem;
-  color: #999999; }
+  color: #999999;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
 .list-inner {
   position: relative; }

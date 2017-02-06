@@ -8,6 +8,16 @@
   height: 20px;
 }
 
+.icon--dots {
+  width: 128px;
+  height: 128px;
+}
+
+.icon--edit {
+  width: 64px;
+  height: 64px;
+}
+
 .icon--hot {
   width: 32px;
   height: 32px;
@@ -41,6 +51,11 @@
 .icon--own {
   width: 512px;
   height: 512px;
+}
+
+.icon--quote {
+  width: 33px;
+  height: 25px;
 }
 
 .icon--start {
