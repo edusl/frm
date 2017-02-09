@@ -35,9 +35,10 @@
 <!-- IF S_DISPLAY_POST_INFO or .pagination or TOTAL_POSTS or TOTAL_TOPICS -->
 	<div class="action-bar bar-top">
 
+	<div class="action-bar__group">
 	<!-- IF not S_IS_BOT and S_DISPLAY_POST_INFO -->
 			<!-- EVENT viewforum_buttons_top_before -->
-
+		<div class="forum-btn">
 		<a href="{U_POST_NEW_TOPIC}" class="btn btn--primary" title="<!-- IF S_IS_LOCKED -->{L_FORUM_LOCKED}<!-- ELSE -->{L_POST_TOPIC}<!-- ENDIF -->">
 			<!-- IF S_IS_LOCKED -->
 				<span>{L_BUTTON_FORUM_LOCKED}</span> <i class="icon fa-lock fa-fw" aria-hidden="true"></i>
@@ -45,6 +46,7 @@
 				<span>{L_BUTTON_NEW_TOPIC}</span> <i class="icon fa-pencil fa-fw" aria-hidden="true"></i>
 			<!-- ENDIF -->
 		</a>
+		</div>
 			<!-- EVENT viewforum_buttons_top_after -->
 	<!-- ENDIF -->
 
@@ -52,18 +54,20 @@
 		<div class="search-box" role="search">
 			<form method="get" id="forum-search" action="{S_SEARCHBOX_ACTION}">
 			<fieldset>
-				<input class="inputbox search tiny" type="search" name="keywords" id="search_keywords" size="20" placeholder="{L_SEARCH_FORUM}" />
-				<button class="button button-search" type="submit" title="{L_SEARCH}">
+				<input class="input search tiny" type="search" name="keywords" id="search_keywords" size="20" placeholder="{L_SEARCH_FORUM}" />
+				<button class="btn btn--secondary button-search" type="submit" title="{L_SEARCH}">
 					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">{L_SEARCH}</span>
 				</button>
-				<a href="{U_SEARCH}" class="button button-search-end" title="{L_SEARCH_ADV}">
-					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">{L_SEARCH_ADV}</span>
+				<a href="{U_SEARCH}" class="" title="{L_SEARCH_ADV}">
+					{L_SEARCH_ADV}
 				</a>
 				{S_SEARCH_LOCAL_HIDDEN_FIELDS}
 			</fieldset>
 			</form>
 		</div>
 	<!-- ENDIF -->
+	</div>
+
 
 	<div class="pagination">
 		<!-- IF not S_IS_BOT and U_MARK_TOPICS and .topicrow --><a href="{U_MARK_TOPICS}" class="mark" accesskey="m" data-ajax="mark_topics_read">{L_MARK_TOPICS_READ}</a> &bull; <!-- ENDIF -->

@@ -1,4 +1,5 @@
 node_modules/
 cache/
 store/
+install_lock/
 config.php

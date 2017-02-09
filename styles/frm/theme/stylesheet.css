@@ -705,7 +705,8 @@ header .header a {
   align-items: center; }
 
 .header__title {
-  font-family: "Yanone Kaffeesatz", sans-serif; }
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 3rem; }
 
 .header__title .logo {
   color: #ffffff; }
@@ -960,8 +961,11 @@ footer {
 	$Search box
 -------------------------------------------------------------- */
 .search-box {
-  padding: 0 .75rem .5rem .5rem;
-  position: relative; }
+  padding: 0 .75rem 0 .5rem;
+  float: left; }
+
+.search-box .input {
+  padding: 5px 10px; }
 
 .search__input {
   width: 100%;
@@ -1087,7 +1091,16 @@ footer {
 .action-bar {
   border: 1px solid red;
   margin-bottom: 1rem;
-  overflow: hidden; }
+  overflow: hidden;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
 /* --------------------------------------------------------------
 	$Permissions
@@ -1202,6 +1215,9 @@ footer {
 /* --------------------------------------------------------------
 	$topiclist
 -------------------------------------------------------------- */
+.forum-btn {
+  float: left; }
+
 /* --------------------------------------------------------------
 	$Body
 -------------------------------------------------------------- */
@@ -1497,8 +1513,7 @@ Posts
   display: inline; }
 
 .pagination {
-  text-align: center;
-  padding: 1rem 0; }
+  text-align: center; }
 
 .select-page {
   display: inline; }
