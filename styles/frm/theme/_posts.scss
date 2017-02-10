@@ -11,9 +11,9 @@ Posts
 }
 
 	.postprofile {
-		//background: #eee;
-		box-sizing: border-box;
-		margin-bottom: 1rem;
+
+
+
 
 		font-size: 90%;
 
@@ -262,13 +262,9 @@ Posts
     }
   }
 
+	.postby,
   .lastpost {
-    width: 80%;
-    float: left;
-    font-size: .85em;
-		padding: .2rem .4rem;
-		box-sizing: border-box;
-		background: lighten($brand-first, 85);
+		display: none;
   }
 
   .topic-date {
@@ -321,9 +317,10 @@ Posts
       width: 10%;
 			background: none;
     }
+
+		.postby,
     .lastpost {
-      width: 20%;
-			background: none;
+      display: inline-block;
     }
   }
 

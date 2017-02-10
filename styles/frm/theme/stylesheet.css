@@ -754,11 +754,14 @@ header .header a {
   fill: #5F4B04;
   color: #5F4B04 !important; }
 
+.user-list__item--in {
+  display: none; }
+
 .user-list__item--Logout {
   display: none; }
 
 @media (min-width: 768px) {
-  .user-list__item--Logout,
+  .user-list__item--in,
   .user-list__item--text {
     display: block; } }
 
@@ -1293,8 +1296,6 @@ Posts
   overflow: hidden; }
 
 .postprofile {
-  box-sizing: border-box;
-  margin-bottom: 1rem;
   font-size: 90%;
   padding: 0 8px 8px 80px;
   height: 80px;
@@ -1451,13 +1452,9 @@ Posts
   display: block;
   line-height: 1rem; }
 
+.topics .postby,
 .topics .lastpost {
-  width: 80%;
-  float: left;
-  font-size: .85em;
-  padding: .2rem .4rem;
-  box-sizing: border-box;
-  background: #fefefe; }
+  display: none; }
 
 .topics .topic-date {
   font-size: .85rem;
@@ -1496,9 +1493,9 @@ Posts
   .topics .posts {
     width: 10%;
     background: none; }
+  .topics .postby,
   .topics .lastpost {
-    width: 20%;
-    background: none; } }
+    display: inline-block; } }
 
 /* --------------------------------------------------------------
 	$Pagination

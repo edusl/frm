@@ -108,12 +108,16 @@ header {
         }
       }
 
+        .user-list__item--in {
+          display: none;
+        }
+
       .user-list__item--Logout {
           display: none;
       }
 
       @include responsive(tablet) {
-        .user-list__item--Logout,
+        .user-list__item--in,
         .user-list__item--text {
           display: block;
         }

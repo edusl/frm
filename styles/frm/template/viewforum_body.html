@@ -190,7 +190,7 @@
 						<div class="topic-date">
 							<!-- IF topicrow.S_HAS_POLL --><i class="icon fa-bar-chart fa-fw" aria-hidden="true"></i><!-- ENDIF -->
 							<!-- IF topicrow.ATTACH_ICON_IMG --><i class="icon fa-paperclip fa-fw" aria-hidden="true"></i><!-- ENDIF -->
-							{topicrow.TOPIC_AUTHOR} - <span class="views">{topicrow.VIEWS} {L_VIEWS}</span>
+							<span class="postby">{L_AUTHOR}:</span> {topicrow.TOPIC_AUTHOR} - <span class="views">{topicrow.VIEWS} {L_VIEWS}</span>, <span class="replies">{topicrow.REPLIES} {L_REPLIES}</span>
 
 							<!-- IF topicrow.S_POST_GLOBAL and FORUM_ID != topicrow.FORUM_ID --> &raquo; {L_IN} <a href="{topicrow.U_VIEW_FORUM}">{topicrow.FORUM_NAME}</a><!-- ENDIF -->
 						</div>
@@ -211,7 +211,7 @@
 						<!-- EVENT topiclist_row_append -->
 					</div>
 				</dt>
-				<dd class="posts">{topicrow.REPLIES} <dfn>{L_REPLIES}</dfn></dd>
+				<!-- <dd class="posts">{topicrow.REPLIES} <dfn>{L_REPLIES}</dfn></dd> -->
 				<!-- <dd class="views">{topicrow.VIEWS} <dfn>{L_VIEWS}</dfn></dd> -->
 
 				<dd class="lastpost">
