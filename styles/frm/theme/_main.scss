@@ -20,7 +20,7 @@ header {
 
 
   .header__inner {
-    height: 4em;
+    height: rem(50);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -47,7 +47,7 @@ header {
 
       .header__title {
         font-family: $font-family-custom;
-        font-size: 3rem;
+        font-size: rem(36);
 
         .logo {
           color: $brand-second-text;
@@ -129,7 +129,7 @@ header {
 
       .user-list__link {
           padding: 0 10px;
-          height: 4em;
+          height: rem(50);
           display: flex;
           align-items: center;
           justify-content: center;
@@ -191,7 +191,7 @@ main {
   @include responsive(tablet) {
     main {
         font-size: 1em;
-        margin-top: 4rem;
+        margin-top: rem(50);
     }
     .showcookies main {
       margin-top: 7rem;

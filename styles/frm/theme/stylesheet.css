@@ -674,7 +674,7 @@ header .header a {
   text-decoration: none; }
 
 .header__inner {
-  height: 4em;
+  height: 3.125rem;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -706,7 +706,7 @@ header .header a {
 
 .header__title {
   font-family: "Yanone Kaffeesatz", sans-serif;
-  font-size: 3rem; }
+  font-size: 2.25rem; }
 
 .header__title .logo {
   color: #ffffff; }
@@ -767,7 +767,7 @@ header .header a {
 
 .user-list__link {
   padding: 0 10px;
-  height: 4em;
+  height: 3.125rem;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -810,7 +810,7 @@ main {
 @media (min-width: 768px) {
   main {
     font-size: 1em;
-    margin-top: 4rem; }
+    margin-top: 3.125rem; }
   .showcookies main {
     margin-top: 7rem; } }
 
