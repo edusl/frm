@@ -1387,7 +1387,8 @@ Posts
   font-size: .9rem;
   height: 2rem;
   -webkit-transition: height 0.3s ease;
-  display: block; }
+  display: block;
+  text-align: right; }
 
 .post-buttons--hide {
   height: 0;

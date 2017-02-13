@@ -103,8 +103,14 @@ $(".header__openmenu").click(function() {
 
 
 $(".show-post-buttons").click(function() {
-	$(this).parent().prev().toggleClass("post-buttons--hide");
+	$('.'+$(this).attr('data-content')).toggle();
 });
+
+$('.combo').on('change', function() {
+	$(this).closest('form').attr('action', this.value);
+})
+
+
 
 /* cookies */
 
