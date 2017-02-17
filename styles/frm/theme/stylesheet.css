@@ -647,7 +647,7 @@ fieldset dl {
 
 .topic-title {
   font-size: 1.4rem;
-  margin-bottom: 1rem;
+  margin-bottom: 20px;
   line-height: 100%; }
 
 @media (min-width: 768px) {
@@ -656,8 +656,7 @@ fieldset dl {
     line-height: 100%;
     text-shadow: 0 0 5px #000; }
   .topic-title {
-    font-size: 2rem;
-    margin-bottom: 1rem; } }
+    font-size: 2rem; } }
 
 /* --------------------------------------------------------------
 	$Main
@@ -757,8 +756,11 @@ header .header a {
 .user-list__item--in {
   display: none; }
 
-.user-list__item--Logout {
-  display: none; }
+.user-list__item--out {
+  background: #FFCB0A; }
+
+.user-list__item--out .icon {
+  fill: #5F4B04; }
 
 @media (min-width: 768px) {
   .user-list__item--in,

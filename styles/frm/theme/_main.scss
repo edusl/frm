@@ -42,7 +42,7 @@ header {
 
     .header__description {
       display: flex;
-      align-items: center;;
+      align-items: center;
     }
 
       .header__title {
@@ -112,9 +112,13 @@ header {
           display: none;
         }
 
-      .user-list__item--Logout {
-          display: none;
-      }
+        .user-list__item--out {
+          background: #FFCB0A;
+          .icon {
+            fill: #5F4B04;  
+          }
+
+        }
 
       @include responsive(tablet) {
         .user-list__item--in,
