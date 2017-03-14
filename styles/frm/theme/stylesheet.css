@@ -453,7 +453,7 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: "Arial", Helvetica, Sans-serif;
+  font-family: "Open Sans", Helvetica, Sans-serif;
   color: #272822;
   background: white; }
 
@@ -626,6 +626,19 @@ fieldset dl {
 .message-box textarea {
   width: 100%; }
 
+/* format buttons */
+.format-buttons .btn {
+  border: 1px solid #333333; }
+
+.format-buttons .bbcode-b {
+  font-weight: bold; }
+
+.format-buttons .bbcode-u {
+  text-decoration: underline; }
+
+.format-buttons .bbcode-i {
+  font-style: italic; }
+
 /* --------------------------------------------------------------
 	$Headers
 -------------------------------------------------------------- */
@@ -733,23 +746,29 @@ header .header a {
   width: 24px;
   height: 24px; }
 
-.user-list .link--profile span {
-  color: white !important;
-  font-weight: bold; }
-
 .user-list .avatar {
   max-height: 50px;
   width: auto; }
+
+.user-list__item--profile .nick {
+  display: none;
+  margin-right: 10px; }
+
+.user-list__item--profile .nick span {
+  color: white !important; }
 
 .user-list__item--text {
   display: none;
   padding: 0 .5rem; }
 
-.user-list__item:hover {
+.user-list__item:hover,
+.user-list__item a:focus {
   background: #FFCB0A; }
 
-.user-list__item:hover .link--profile span,
-.user-list__item:hover .icon {
+.user-list__item:hover .nick span,
+.user-list__item:hover .icon,
+.user-list__item a:focus .nick span,
+.user-list__item a:focus .icon {
   fill: #5F4B04;
   color: #5F4B04 !important; }
 
@@ -765,7 +784,9 @@ header .header a {
 @media (min-width: 768px) {
   .user-list__item--in,
   .user-list__item--text {
-    display: block; } }
+    display: block; }
+  .user-list__item--profile .nick {
+    display: inline; } }
 
 .user-list__link {
   padding: 0 10px;
@@ -859,6 +880,7 @@ footer {
   color: white; }
 
 .sidebar__avatar {
+  background: #fff;
   text-align: center;
   padding: .5rem; }
 
@@ -879,7 +901,7 @@ footer {
   fill: #ffffff !important; }
 
 .sidebar__nick span {
-  color: #FFCB0A !important;
+  color: #000;
   font-size: 1.4rem;
   border-bottom: 1px dotted white;
   display: block;
@@ -1233,34 +1255,33 @@ footer {
   display: inline-block;
   padding: .2rem .5rem; }
 
-.forums {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
+.forums .forum-2 {
+  background: url("../../../images/pic/basket.jpg"); }
+
+.forums .forum-3 {
+  background: url("../../../images/pic/estadio.jpg"); }
+
+.forums .forum-4 {
+  background: url("../../../images/pic/futbol.jpg"); }
 
 .forums .row {
   box-sizing: border-box;
-  margin-bottom: 1rem; }
-
-@media (min-width: 768px) {
-  .forums .row {
-    width: 50%;
-    height: 12rem; }
-  .forums .row:nth-child(odd) .row__inner {
-    margin-right: .5rem; }
-  .forums .row:nth-child(even) .row__inner {
-    margin-left: .5rem; } }
+  margin-bottom: 1rem;
+  background-color: #eee;
+  display: inline-block;
+  margin: 0 0 1em;
+  width: 100%; }
 
 .forums .row .row-item {
   padding: 1rem;
-  border: 1px solid red;
-  background-color: rgba(255, 255, 255, 0.7); }
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  margin-top: 100px;
+  color: white;
+  transition: all .3s ease-in-out; }
+
+.forums .row a {
+  color: #FFCB0A; }
 
 .forums .row .topics {
   width: 10rem; }
@@ -1269,7 +1290,6 @@ footer {
   font-size: .7rem; }
 
 .forums .row__inner {
-  border: 1px solid blue;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -1278,14 +1298,36 @@ footer {
   align-items: flex-start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
-  justify-content: flex-start; }
+  justify-content: flex-start;
+  transition: all .5s ease-out; }
+
+.forums .row__inner:hover {
+  background-position: 0 -10px; }
+
+.forums .row__inner:hover .row-item {
+  background-color: rgba(0, 0, 0, 0.8); }
 
 .forumtitle {
   font-size: 2rem;
-  color: #272822; }
+  color: white; }
 
 .forum-desc {
-  font-size: .85rem; }
+  font-size: .85rem;
+  display: none; }
+
+@media (min-width: 480px) {
+  .forums {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2; }
+  .forum-desc {
+    display: block; } }
+
+@media (min-width: 1280px) {
+  .forums {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3; } }
 
 /*
 --------------------------------------------------------------
@@ -1299,16 +1341,14 @@ Posts
 
 .postprofile {
   font-size: 90%;
-  padding: 0 8px 8px 80px;
+  padding: 0 0 0 80px;
   height: 80px;
   position: relative;
   overflow: hidden; }
 
 .postprofile .avatar {
   display: inline-block;
-  border: 2px solid white;
-  box-shadow: 2px 2px 10px #aaa;
-  margin: 0 8px 8px 0; }
+  box-shadow: 2px 2px 10px #aaa; }
 
 .search .h3 {
   margin-bottom: 0; }
@@ -1358,12 +1398,18 @@ Posts
   max-width: 64px;
   max-height: 64px; }
 
+.nick-container a {
+  font-weight: bold; }
+
 @media (min-width: 768px) {
   .avatar-container {
     position: static; }
   .avatar-container .avatar {
     max-width: 128px;
-    max-height: 128px; }
+    max-height: 128px;
+    margin-bottom: 10px; }
+  .nick-container {
+    font-size: 120%; }
   .postprofile {
     width: 12rem;
     height: auto;
@@ -1400,7 +1446,7 @@ Posts
 
 .post-buttons__item {
   display: inline;
-  margin-right: .5rem; }
+  margin-left: 8px; }
 
 .post-buttons__icon {
   width: 24px;
@@ -1413,7 +1459,8 @@ Posts
 
 .show-post-buttons .icon {
   width: 24px;
-  height: 24px; }
+  height: 24px;
+  fill: #ccc; }
 
 .show-post-buttons:hover {
   fill: #333333; }
@@ -1441,7 +1488,11 @@ Posts
 .topics dl {
   overflow: hidden;
   margin-bottom: 8px;
-  border-bottom: 1px dotted #a9ac9d; }
+  border-bottom: 1px dotted #a9ac9d;
+  position: relative; }
+
+.topics dt {
+  float: left; }
 
 .topics .posts {
   float: right;
@@ -1455,14 +1506,20 @@ Posts
   display: block;
   line-height: 1rem; }
 
-.topics .postby,
 .topics .lastpost {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  text-align: right;
+  font-size: 80%; }
+
+.topics .postby,
+.topics .lastpost__author {
   display: none; }
 
 .topics .topic-date {
-  font-size: .85rem;
-  margin-bottom: .25rem;
-  color: gray; }
+  font-size: 80%;
+  color: #999999; }
 
 .post-head {
   font-size: 80%;
@@ -1497,8 +1554,8 @@ Posts
     width: 10%;
     background: none; }
   .topics .postby,
-  .topics .lastpost {
-    display: inline-block; } }
+  .topics .lastpost__author {
+    display: inline; } }
 
 /* --------------------------------------------------------------
 	$Pagination

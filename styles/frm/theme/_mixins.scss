@@ -38,35 +38,43 @@
 // Responsive
 
 @mixin responsive($breakpoint) {
+
+  @if $breakpoint == "mini" {
+    @media (max-width: 320px) {
+      @content;
+    }
+  }
+
   @if $breakpoint == "mobile" {
-    @media (max-width: 767px) {
+    @media (min-width: 321px) and (max-width: 767px) {
       @content;
     }
   }
 
-  @if $breakpoint == "toTablet" {
-    @media (max-width: 1023px) {
+  @if $breakpoint == "tablet" {
+    @media (min-width: 768px) and (max-width: 1023px) {
       @content;
     }
   }
 
-	@if $breakpoint == "tablet" {
-    @media (min-width: 768px) {
+	// @if $breakpoint == "tablet" {
+  //   @media (min-width: 768px) {
+  //     @content;
+  //   }
+  // }
+
+
+  @if $breakpoint == "desktop" {
+    @media (min-width: 1024px) and (max-width: 1279px) {
       @content;
     }
   }
 
-  @if $breakpoint == "toDesktop" {
-    @media (max-width: 1279px) {
-      @content;
-    }
-  }
-
-  @else if $breakpoint == "desktop" {
-    @media (min-width: 1024px) {
-      @content;
-    }
-  }
+  // @else if $breakpoint == "desktop" {
+  //   @media (min-width: 1024px) {
+  //     @content;
+  //   }
+  // }
 
   @else if $breakpoint == "largedesktop" {
     @media (min-width: 1280px) {

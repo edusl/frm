@@ -30,6 +30,8 @@
 -->
 
 <link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
 <link href="{T_STYLESHEET_LINK}" rel="stylesheet">
 <link href="{T_STYLESHEET_LANG_LINK}" rel="stylesheet">
 
@@ -66,6 +68,8 @@
 	<header>
 
 		<div class="header" role="banner">
+
+			<!-- cookies -->
 			<div id="cookies">
 				<a href="javascript:void(0);" class="ok" onclick="PonerCookie();">
 				<svg role="img" class="cookies__icon" title="Abrir menú"><use xlink:href="images/svg/dist/svg-symbols.svg#close"></use></svg>
@@ -74,6 +78,8 @@
 			</div>
 
 			<a id="top" class="top-anchor" accesskey="t"></a>
+
+
 			<div class="header__inner">
 				<div class="header__description">
 
@@ -100,9 +106,10 @@
 
 						<!-- ENDIF -->
 						<!-- IF S_USER_LOGGED_IN -->
-						<li class="user-list__item">
-							<a class="user-list__link link--profile" href="{U_USER_PROFILE}" title="{L_PROFILE}" class="header-avatar dropdown-trigger">{CURRENT_USERNAME_SIMPLE}
-								<!-- <svg role="img" class="user-list__icon" title=""><use xlink:href="images/svg/dist/svg-symbols.svg#user"></use></svg> -->
+						<li class="user-list__item user-list__item--profile">
+							<a class="user-list__link" href="{U_USER_PROFILE}" title="{L_PROFILE}" class="header-avatar dropdown-trigger">
+								<span class="nick">{CURRENT_USERNAME_SIMPLE}</span>
+								<svg role="img" class="icon" title=""><use xlink:href="images/svg/dist/svg-symbols.svg#user"></use></svg>
 							</a>
 						</li>
 						<li class="user-list__item">

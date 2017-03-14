@@ -12,21 +12,16 @@ Posts
 
 	.postprofile {
 
-
-
-
 		font-size: 90%;
-
-		padding: 0 8px 8px 80px;
+		padding: 0 0 0 80px;
 		height: 80px;
 		position: relative;
 		overflow: hidden;
 
 		.avatar {
 			display: inline-block;
-			border: 2px solid white;
+			// border: 2px solid white;
 			box-shadow: 2px 2px 10px #aaa;
-			margin: 0 8px 8px 0;
 		}
 	}
 
@@ -95,6 +90,13 @@ Posts
 }
 
 
+.nick-container {
+	a {
+		font-weight: bold;
+	}
+
+}
+
 @include responsive(tablet) {
 
 	.avatar-container {
@@ -102,7 +104,13 @@ Posts
 		.avatar {
 			max-width: 128px;
 			max-height: 128px;
+			margin-bottom: 10px;
+
 		}
+	}
+
+	.nick-container {
+		font-size: 120%;
 	}
 
 	.postprofile {
@@ -176,7 +184,7 @@ Posts
 
 	.post-buttons__item {
 		display: inline;
-		margin-right: .5rem;
+		margin-left: 8px;
 	}
 
 	.post-buttons__icon {
@@ -193,6 +201,7 @@ Posts
 		.icon {
 			width: 24px;
 			height: 24px;
+			fill: #ccc;
 		}
 
 		&:hover {
@@ -246,6 +255,11 @@ Posts
     overflow: hidden;
     margin-bottom: 8px;
 		border-bottom: 1px dotted lighten($brand-first, 50);
+		position: relative;
+	}
+
+	dt {
+		float: left;
 	}
 
   .posts{
@@ -263,15 +277,22 @@ Posts
     }
   }
 
+	.lastpost {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		text-align: right;
+		font-size: 80%;
+	}
+
 	.postby,
-  .lastpost {
+  .lastpost__author {
 		display: none;
   }
 
   .topic-date {
-    font-size: .85rem;
-		margin-bottom: .25rem;
-		color: lighten($brand-first-text, 30);
+    font-size: 80%;
+		color: lighten($brand-first-text, 40);
 
  }
 
@@ -320,9 +341,10 @@ Posts
     }
 
 		.postby,
-    .lastpost {
-      display: inline-block;
+    .lastpost__author {
+      display: inline;
     }
+
   }
 
 }

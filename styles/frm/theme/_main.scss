@@ -78,10 +78,7 @@ header {
         height: 24px;
       }
 
-      .link--profile span {
-        color: white!important;
-        font-weight: bold;
-      }
+
 
 
       .avatar {
@@ -89,6 +86,16 @@ header {
         width: auto;
       }
     }
+
+
+      .user-list__item--profile .nick {
+        display: none;
+        margin-right: 10px;
+
+        span {
+          color: white!important;
+        }
+      }
 
       .user-list__item--text {
         display: none;
@@ -98,9 +105,10 @@ header {
 
       .user-list__item {
 
-        &:hover {
+        &:hover,
+        a:focus {
           background: #FFCB0A;
-          .link--profile span,
+          .nick span,
           .icon {
             fill: #5F4B04;
             color: #5F4B04!important;
@@ -115,7 +123,7 @@ header {
         .user-list__item--out {
           background: #FFCB0A;
           .icon {
-            fill: #5F4B04;  
+            fill: #5F4B04;
           }
 
         }
@@ -125,10 +133,10 @@ header {
         .user-list__item--text {
           display: block;
         }
-
-        .user-list__item--Login {
-          //display: none;
+        .user-list__item--profile .nick {
+          display: inline;
         }
+
       }
 
       .user-list__link {
@@ -257,13 +265,12 @@ footer {
   }
 
   .sidebar__avatar {
-    //background: #000;
+    background: #fff;
     text-align: center;
     padding: .5rem;
 
     .avatar {
       margin-bottom: .5rem;
-
     }
 
 
@@ -285,7 +292,7 @@ footer {
   }
 
   .sidebar__nick span {
-    color: $brand-third !important;
+    color: #000;
     font-size: 1.4rem;
     border-bottom: 1px dotted white;
     display: block;

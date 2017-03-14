@@ -3,8 +3,16 @@
 -------------------------------------------------------------- */
 
 @mixin responsive($breakpoint) {
+
+
+  @if $breakpoint == "mini" {
+    @media (min-width: 320px) {
+      @content;
+    }
+  }
+
   @if $breakpoint == "mobile" {
-    @media (max-width: 480px) {
+    @media (min-width: 480px) {
       @content;
     }
   }
@@ -22,7 +30,7 @@
   }
 
   @else if $breakpoint == "largedesktop" {
-    @media (min-width: 1200px) {
+    @media (min-width: 1280px) {
       @content;
     }
   }

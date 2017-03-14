@@ -20,33 +20,54 @@
 
 
 .forums {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
 
-  .row {
-    box-sizing: border-box;
-    margin-bottom: 1rem;
+    &:nth-child(odd) .row__inner {
+    //  margin-right: .5rem;
+    }
 
-    @include responsive(tablet) {
-        width: 50%;
-        height: 12rem;
-
-        &:nth-child(odd) .row__inner {
-          margin-right: .5rem;
-        }
-
-        &:nth-child(even) .row__inner {
-          margin-left: .5rem;
-        }
+    &:nth-child(even) .row__inner {
+    //  margin-left: .5rem;
     }
 
 
 
+  .forum-2 {
+    background: url('../../../images/pic/basket.jpg');
+  }
+
+  .forum-3 {
+    background: url('../../../images/pic/estadio.jpg');
+
+  }
+  .forum-4 {
+    background: url('../../../images/pic/futbol.jpg');
+  }
+
+
+  .row {
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    background-color: #eee;
+    display: inline-block;
+    margin: 0 0 1em;
+    width: 100%;
+
+
     .row-item {
       padding: 1rem;
-      border: 1px solid red;
-      background-color: rgba(256,256,256,0.7);
+      background-color: rgba(0,0,0,0.5);
+      width: 100%;
+      margin-top: 100px;
+      color: white;
+      transition: all .3s ease-in-out;
+
+    }
+
+
+
+
+    a {
+      color: $brand-third;
     }
 
     .topics {
@@ -59,20 +80,48 @@
   }
 
   .row__inner {
-    border: 1px solid blue;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
+    transition: all .5s ease-out;
+
+    &:hover {
+
+      background-position: 0 -10px;
+
+      .row-item {
+        background-color: rgba(0,0,0,0.8);
+
+      }
+    }
   }
+
 
 }
 
 
   .forumtitle {
     font-size: 2rem;
-    color: $brand-first;
+    color: white;
   }
 
   .forum-desc {
     font-size: .85rem;
+    display: none;
+  }
+
+  @include responsive(mobile) {
+    .forums {
+      column-count: 2;
+    }
+    .forum-desc {
+      display: block;
+    }
+  }
+
+
+  @include responsive(largedesktop) {
+    .forums {
+      column-count: 3;
+    }
   }

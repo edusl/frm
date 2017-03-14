@@ -134,3 +134,24 @@ fieldset {
     width: 100%;
   }
 }
+
+
+/* format buttons */
+
+.format-buttons {
+  .btn {
+    border: 1px solid $brand-first-text;
+  }
+
+  .bbcode-b {
+    font-weight: bold;
+  }
+
+  .bbcode-u {
+    text-decoration: underline;
+  }
+
+  .bbcode-i {
+    font-style: italic;
+  }
+}
