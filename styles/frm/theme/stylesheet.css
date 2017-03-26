@@ -545,17 +545,29 @@ abbr[title] {
 /* --------------------------------------------------------------
 	$Form
 -------------------------------------------------------------- */
+.form-box {
+  margin-bottom: 15px;
+  border: 1px solid red; }
+
 .inputbox {
-  border: none;
   padding: .4rem .6rem;
-  border: 1px solid #ccc; }
+  border: 1px solid #ccc;
+  transition: all .3s linear;
+  width: 100%;
+  box-sizing: border-box; }
 
 .inputbox:focus {
   border: 1px solid #4d4d4d;
+  border-left: 5px solid #AC1C39;
   outline: none; }
 
 select {
   padding: .4rem .6rem; }
+
+label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 5px; }
 
 fieldset dl {
   margin-bottom: 1rem; }
@@ -627,9 +639,6 @@ fieldset dl {
   width: 100%; }
 
 /* format buttons */
-.format-buttons .btn {
-  border: 1px solid #333333; }
-
 .format-buttons .bbcode-b {
   font-weight: bold; }
 
@@ -827,7 +836,6 @@ main {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  box-shadow: 0 0 3px #272822;
   margin-top: 3rem; }
 
 @media (min-width: 768px) {
@@ -1167,6 +1175,9 @@ footer {
 .msg--error {
   background: #AC1C39; }
 
+.msg--error a {
+  color: #FFA900; }
+
 /* --------------------------------------------------------------
 	$Cookies
 -------------------------------------------------------------- */
@@ -1254,15 +1265,6 @@ footer {
   font-size: 0.75rem;
   display: inline-block;
   padding: .2rem .5rem; }
-
-.forums .forum-2 {
-  background: url("../../../images/pic/basket.jpg"); }
-
-.forums .forum-3 {
-  background: url("../../../images/pic/estadio.jpg"); }
-
-.forums .forum-4 {
-  background: url("../../../images/pic/futbol.jpg"); }
 
 .forums .row {
   box-sizing: border-box;

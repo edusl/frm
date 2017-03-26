@@ -3,19 +3,36 @@
 -------------------------------------------------------------- */
 
 
+.form-box {
+  margin-bottom: 15px;
+  border: 1px solid red;
+}
+
+
 .inputbox {
-  border: none;
   padding: .4rem .6rem;
   border: 1px solid $input-border;
+  transition: all .3s linear;
+  width: 100%;
+  box-sizing: border-box;
+
 
   &:focus {
     border: 1px solid darken($input-border, 50%);
+    border-left: 5px solid $color-error;
     outline: none;
   }
 }
 
 select {
   padding: .4rem .6rem;
+}
+
+
+label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 5px;
 }
 
 
@@ -140,7 +157,6 @@ fieldset {
 
 .format-buttons {
   .btn {
-    border: 1px solid $brand-first-text;
   }
 
   .bbcode-b {

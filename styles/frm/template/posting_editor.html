@@ -25,7 +25,9 @@
 		<dt><label for="subject">{L_SUBJECT}{L_COLON}</label></dt>
 		<dd>
 			<!-- EVENT posting_editor_subject_prepend -->
-			<input type="text" name="subject" id="subject" size="45" maxlength="<!-- IF S_NEW_MESSAGE -->120<!-- ELSE -->124<!-- ENDIF -->" tabindex="2" value="{SUBJECT}{DRAFT_SUBJECT}" class="inputbox autowidth" />
+			<!-- IF S_NEW_MESSAGE -->
+			<input type="text" name="subject" id="subject" size="45" maxlength="120" tabindex="2" value="{SUBJECT}{DRAFT_SUBJECT}" class="inputbox autowidth" />
+			<!-- ENDIF -->
 			<!-- EVENT posting_editor_subject_append -->
 		</dd>
 	</dl>
