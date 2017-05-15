@@ -85,6 +85,8 @@
     justify-content: flex-start;
     transition: all .5s ease-out;
 
+
+
     &:hover {
 
       background-position: 0 -10px;
@@ -124,4 +126,13 @@
     .forums {
       column-count: 3;
     }
+  }
+
+
+
+
+  // titles
+
+  .title-mod {
+    margin-bottom: 15px;
   }

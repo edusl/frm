@@ -5,7 +5,7 @@
 
 .form-box {
   margin-bottom: 15px;
-  border: 1px solid red;
+
 }
 
 
@@ -69,6 +69,9 @@ fieldset {
   .btn--secondary {
     background: $brand-third;
     color: $brand-first-text;
+  }
+
+  .btn--post {
   }
 
 
@@ -147,15 +150,35 @@ fieldset {
 
 .message-box {
   width: 100%;
-  textarea {
+
+
+  .inputbox {
     width: 100%;
+    transition: none;
+
+    &:focus {
+      border: 1px solid $brand-first;
+    }
   }
+}
+
+
+@include responsive(tablet) {
+  .message-box {
+    width: 70%;
+    float: left;
+
+  }
+
 }
 
 
 /* format buttons */
 
 .format-buttons {
+
+  margin-bottom: 15px;
+
   .btn {
   }
 

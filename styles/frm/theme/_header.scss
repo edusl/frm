@@ -13,13 +13,19 @@
 }
 
 
-.forum-title {
+.forum-head {
   position: absolute;
-  margin-bottom: 0;
-  bottom: 1rem;
-  left: 1rem;
+  bottom: 10px;
+  left: 10px;
   color: white;
+  a,
+  .link {
+    color: white;
+  }
+}
 
+.forum-title {
+  margin-bottom: 0;
   a {
     color: #fff;
   }
@@ -29,13 +35,24 @@
   font-size: 1.4rem;
   margin-bottom: 20px;
   line-height: 100%;
+
+  &:hover a {
+    text-decoration: none;
+  }
 }
 
   @include responsive(tablet) {
-    .forum-title {
-      font-size: 2rem;
+    .forum-head {
       line-height: 100%;
       text-shadow: 0 0 5px #000;
+      bottom: 15px;
+      left: 15px;
+
+      .forum-title {
+        margin-bottom: 5px;
+        font-size: 2rem;
+        line-height: 2rem;
+      }
     }
 
     .topic-title {

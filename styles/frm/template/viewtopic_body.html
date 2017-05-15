@@ -30,7 +30,7 @@
 	<!-- EVENT viewtopic_buttons_top_before -->
 
 	<!-- IF not S_IS_BOT and S_DISPLAY_REPLY_INFO -->
-		<a href="{U_POST_REPLY_TOPIC}" class="btn btn--primary" title="<!-- IF S_IS_LOCKED -->{L_TOPIC_LOCKED}<!-- ELSE -->{L_POST_REPLY}<!-- ENDIF -->">
+		<a href="{U_POST_REPLY_TOPIC}" class="btn btn--primary btn--post" title="<!-- IF S_IS_LOCKED -->{L_TOPIC_LOCKED}<!-- ELSE -->{L_POST_REPLY}<!-- ENDIF -->">
 			<!-- IF S_IS_LOCKED -->
 				<span>{L_BUTTON_TOPIC_LOCKED}</span> </i>
 			<!-- ELSE -->
@@ -52,12 +52,12 @@
 					<div class="select-page">
 						<span class="pagination__total">{TOTAL_POSTS}</span>
 
-						<a class="btn button-icon-only dropdown-trigger" href="#" title="{L_JUMP_TO_PAGE_CLICK}" role="button">{PAGE_NUMBER}</a>
-							<div class="invisible">
-								<label for="page-number">{L_JUMP_TO_PAGE}{L_COLON}</label>
-									<input type="number" id="page-number" name="page-number" min="1" max="999999" title="{L_JUMP_PAGE}" class="inputbox tiny" data-per-page="{PER_PAGE}" data-base-url="{BASE_URL|e('html_attr')}" data-start-name="{START_NAME}" />
-									<input class="btn btn--secondary" value="{L_GO}" type="button" />
-							</div>
+						<a class="pagination__current dropdown-trigger" href="#" title="{L_JUMP_TO_PAGE_CLICK}" role="button">{PAGE_NUMBER}</a>
+						<div class="invisible">
+							<label for="page-number">{L_JUMP_TO_PAGE}{L_COLON}</label>
+								<input type="number" id="page-number" name="page-number" min="1" max="999999" title="{L_JUMP_PAGE}" class="inputbox tiny" data-per-page="{PER_PAGE}" data-base-url="{BASE_URL|e('html_attr')}" data-start-name="{START_NAME}" />
+								<input class="btn btn--secondary" value="{L_GO}" type="button" />
+						</div>
 					</div>
 				<!-- ENDIF -->
 				<div class="pagination-box">
@@ -396,11 +396,11 @@
 	<!-- EVENT viewtopic_buttons_bottom_before -->
 
 	<!-- IF not S_IS_BOT and S_DISPLAY_REPLY_INFO -->
-		<a href="{U_POST_REPLY_TOPIC}" class="btn btn--primary" title="<!-- IF S_IS_LOCKED -->{L_TOPIC_LOCKED}<!-- ELSE -->{L_POST_REPLY}<!-- ENDIF -->">
+		<a href="{U_POST_REPLY_TOPIC}" class="btn btn--primary btn--post" title="<!-- IF S_IS_LOCKED -->{L_TOPIC_LOCKED}<!-- ELSE -->{L_POST_REPLY}<!-- ENDIF -->">
 			<!-- IF S_IS_LOCKED -->
-				<span>{L_BUTTON_TOPIC_LOCKED}</span> <i class="icon fa-lock fa-fw" aria-hidden="true"></i>
+				<span>{L_BUTTON_TOPIC_LOCKED}</span>
 			<!-- ELSE -->
-				<span>{L_BUTTON_POST_REPLY}</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+				<span>{L_BUTTON_POST_REPLY}</span>
 			<!-- ENDIF -->
 		</a>
 	<!-- ENDIF -->

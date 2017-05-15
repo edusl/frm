@@ -11,17 +11,21 @@ Posts
 }
 
 	.postprofile {
-
 		font-size: 90%;
-		padding: 0 0 0 80px;
-		height: 80px;
 		position: relative;
 		overflow: hidden;
+		background: #eee;
+		border: 1px solid #ccc;
+
 
 		.avatar {
 			display: inline-block;
-			// border: 2px solid white;
-			box-shadow: 2px 2px 10px #aaa;
+		}
+
+
+		.profile-rank,
+		.profile-posts {
+			//display: inline;
 		}
 	}
 
@@ -82,7 +86,8 @@ Posts
 
 
 .avatar-container {
-	position: absolute; left: 0; top:0;
+	float: left;
+	padding: 5px;
 	.avatar {
 		max-width: 64px;
 		max-height: 64px;
@@ -100,12 +105,13 @@ Posts
 @include responsive(tablet) {
 
 	.avatar-container {
-		position: static;
+		float: none;
+		padding: 0;
+
 		.avatar {
 			max-width: 128px;
 			max-height: 128px;
-			margin-bottom: 10px;
-
+			margin-bottom: 5px;
 		}
 	}
 
@@ -116,6 +122,8 @@ Posts
 	.postprofile {
 		width: 12rem;
 		height: auto;
+		background: white;
+		border: none;
 
 
 		float: left;
@@ -163,9 +171,56 @@ Posts
 }
 
 
+.post-icon {
+	dd label {
+		display: inline;
+		padding: 5px;
+
+		input {
+			vertical-align: middle;
+			margin-right: 5px;
+		}
+	}
+}
+
+
+// smiley box
+
+#smiley-box {
+
+
+	a {
+		padding: 3px 6px;
+		display: inline-block;
+
+
+		&:hover {
+			background: #eee;
+		}
+	}
+}
+
+
+@include responsive(tablet) {
+	#smiley-box {
+		width: 30%;
+		float: right;
+		box-sizing: border-box;
+		padding: 0 20px;
+	}
+}
+
+.postbody {
+
+}
+
+
+
+
+
 .post-buttons {
 	font-size: .9rem;
-	height: 2rem;
+	margin: 10px 0 10px;
 	-webkit-transition: height 0.3s ease;
 	display: block;
 	text-align: right;
@@ -256,10 +311,14 @@ Posts
     margin-bottom: 8px;
 		border-bottom: 1px dotted lighten($brand-first, 50);
 		position: relative;
+
+		&:hover {
+			border-bottom: 1px solid $brand-third;
+		}
 	}
 
-	dt {
-		float: left;
+	.row:hover {
+
 	}
 
   .posts{
@@ -278,11 +337,22 @@ Posts
   }
 
 	.lastpost {
-		position: absolute;
+		/*position: absolute;
 		right: 0;
-		bottom: 0;
+		bottom: 0;*/
 		text-align: right;
 		font-size: 80%;
+
+		a {
+			color: #000;
+			background: lighten($brand-third, 40);
+			padding: 2px 5px;
+			text-decoration: none;
+
+			&:hover {
+				background: lighten($brand-third, 30);
+			}
+		}
 	}
 
 	.postby,
@@ -293,6 +363,7 @@ Posts
   .topic-date {
     font-size: 80%;
 		color: lighten($brand-first-text, 40);
+		display: inline;
 
  }
 
@@ -305,13 +376,16 @@ Posts
 
 	.post-head {
 		font-size: 80%;
-		border-bottom: 1px solid lighten($brand-first-text, 60%);
 		position: relative;
 		padding-bottom: .2rem;
 		color: lighten($brand-first-text, 40%);
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+
+		.unread {
+			display: none;
+		}
 	}
 
 .list-inner {
@@ -327,13 +401,14 @@ Posts
       display: flex;
       justify-content: space-between;
 
-
-			&:hover {
+			.btn--pagination {
+				padding: 0 8px;
+				font-size: .8rem;
 			}
     }
 
     dt {
-      width: 70%;
+      width: 75%;
     }
     .posts {
       width: 10%;
@@ -345,7 +420,17 @@ Posts
       display: inline;
     }
 
+
+
   }
+
+	.post-head {
+		border-bottom: 1px solid lighten($brand-first-text, 60%);
+
+		.unread {
+			display: inline;
+		}
+	}
 
 }
 
@@ -353,11 +438,13 @@ Posts
 	$Pagination
 -------------------------------------------------------------- */
 .pagination-box {
-	display: none;
+	clear: left;
+	text-align: right;
 }
 
 
 .pagination-list {
+	display: none;
 	margin-bottom: .5rem;
 
 	.pagination-list__item {
@@ -367,16 +454,26 @@ Posts
 
 
 .pagination {
-	text-align: center;
+	text-align: right;
 }
-	.pagination__total {
+	.pagination__info {
+		margin-bottom: 5px;
+		display: block;
 	}
 
+	.pagination__total {
+
+	}
+
+
+
 	.select-page {
-		display: inline;
+		display: inline-block;
+		margin-bottom: 15px;
 	}
 
 .topic-pagination {
+
 	.topic-pagination__item {
 		display: inline;
 		font-size: .75em;
@@ -394,16 +491,9 @@ Posts
 }
 
 @include responsive(tablet) {
-.pagination {
-	float: right;
-	text-align: right;
-}
 
-	.pagination__total {
-		display: inline;
-	}
 	.pagination-box {
-		display: block;
+		clear: none;
 	}
 
 	.topic-pagination {
@@ -418,6 +508,11 @@ Posts
 
 }
 
+@include responsive(desktop) {
+	.topic-pagination {
+		display: inline;
+	}
+}
 /* --------------------------------------------------------------
 	$Display options
 -------------------------------------------------------------- */
@@ -426,8 +521,9 @@ Posts
 .display-options {
 	clear: both;
 	text-align: center;
-	margin-bottom: 1rem;
-	padding: 1rem 0;
+	margin-bottom: 15px;
+	padding: 15px 0;
+	width: 100%;
 
 	label {
 		display: block;
@@ -438,10 +534,31 @@ Posts
 
 @include responsive(tablet) {
 	.display-options {
-		text-align: right;
 
 		label {
 			display: inline;
 		}
+	}
+}
+
+
+
+.actions-jump {
+	flex-direction: column;
+	width: 100%;
+	align-items: center;
+}
+
+
+/* --------------------------------------------------------------
+	$Post text
+-------------------------------------------------------------- */
+
+.post-text {
+}
+
+@include responsive(tablet) {
+	.post-text {
+		min-height: 300px;
 	}
 }

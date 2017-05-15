@@ -137,6 +137,14 @@ header {
           display: inline;
         }
 
+        .hover_rotate {
+          &:hover {
+            transform: rotate(180deg);
+            transition-duration: .5s;
+            transition-delay: now;
+            }
+        }
+
       }
 
       .user-list__link {
@@ -147,13 +155,7 @@ header {
           justify-content: center;
       }
 
-        .hover_rotate {
-          &:hover {
-            transform: rotate(180deg);
-            transition-duration: .5s;
-            transition-delay: now;
-            }
-        }
+
 
         .user-list__link--Logout {
         }
@@ -410,6 +412,8 @@ footer {
 
 
 .search-box {
+  font-size: .8rem;
+  display: none;
   padding: 0 .75rem 0 .5rem;
   float: left;
 
@@ -418,6 +422,12 @@ footer {
     padding: 5px 10px;
   }
 }
+
+  @include responsive(tablet) {
+    .search-box {
+      display: inline-block;
+    }
+  }
 
   .search__input {
     width: 100%;
@@ -452,13 +462,18 @@ footer {
 
 
 .page-body {
-  padding: 1rem 1rem 0 1rem;
+  padding: 15px 10px 0 10px;
   overflow: hidden;
   // background: linear-gradient(to bottom, white, #eee);
   background-repeat: no-repeat;
   background-size: contain;
   background: white;
+
+  @include responsive(tablet) {
+    padding: 15px;
+  }
 }
+
 
 
 /* --------------------------------------------------------------
@@ -584,6 +599,7 @@ footer {
   background-color: $brand-second;
   padding: 1rem;
   margin-bottom: 1rem;
+  font-size: .9rem;
 }
 
 
@@ -601,13 +617,63 @@ footer {
 
 
 .action-bar {
+  font-size: .9rem;
   border: 1px solid red;
   margin-bottom: 1rem;
   overflow: hidden;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+  .btn--post {
+  }
+
+  .select-page {
+    margin-bottom: 5px;
+  }
+
+  .pagination {
+    font-size: .8rem;
+    float: right;
+  }
+
+  .pagination__total {
+    display: inline-block;
+  }
+
 }
+
+.bar-top {
+  .pagination {
+    display: none;
+  }
+}
+
+.bar-bottom {
+  .pagination {
+    clear: left;
+    margin-top: 10px;
+    display: block;
+    float: none;
+  }
+}
+
+@include responsive(tablet) {
+  .bar-top {
+    .pagination {
+      display: block;
+    }
+  }
+
+  .bar-bottom {
+    .pagination {
+
+
+      float: right;
+      margin-top: 0;
+
+
+    }
+  }
+}
+
 
 
 
@@ -781,10 +847,16 @@ background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vc
 }
 
 
+/* --------------------------------------------------------------
+	$Select date
+-------------------------------------------------------------- */
 
 
-
-
+.select-date {
+  label {
+    display: inline-block;
+  }
+}
 
 
 
@@ -809,7 +881,15 @@ background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vc
 -------------------------------------------------------------- */
 
 .topiclist {
+  dt {
+    float: left;
+    width: 75%;
+  }
 
+  dd {
+    float: right;
+    width: 25%;
+  }
 }
 
 
