@@ -22,6 +22,9 @@ Posts
 			display: inline-block;
 		}
 
+		dd {
+			font-size: rem(13);
+		}
 
 		.profile-rank,
 		.profile-posts {
@@ -51,7 +54,7 @@ Posts
 	}
 
 	.results-box {
-		background: lighten($brand-third, 40);
+		background: lighten($basecolor-3, 40);
 		padding: .5rem .5rem .5rem .5rem;
 	}
 
@@ -59,7 +62,7 @@ Posts
 // previous posts list
 .topicreview {
 
-	background: $brand-second;
+	background: $basecolor-2;
 	padding: .5rem;
 	margin-bottom: 1rem;
 
@@ -96,6 +99,9 @@ Posts
 
 
 .nick-container {
+
+	margin-bottom: 15px;
+	
 	a {
 		font-weight: bold;
 	}
@@ -260,7 +266,7 @@ Posts
 		}
 
 		&:hover {
-			fill: $brand-first-text;
+			fill: $basecolor-1-text;
 		}
 	}
 
@@ -296,6 +302,7 @@ Posts
 
 .content {
 	padding: .5rem 0;
+	font-size: .9rem;
 }
 
 
@@ -309,11 +316,11 @@ Posts
   dl {
     overflow: hidden;
     margin-bottom: 8px;
-		border-bottom: 1px dotted lighten($brand-first, 50);
+		border-bottom: 1px dotted lighten($basecolor-1, 50);
 		position: relative;
 
 		&:hover {
-			border-bottom: 1px solid $brand-third;
+			border-bottom: 1px solid $basecolor-3;
 		}
 	}
 
@@ -325,7 +332,7 @@ Posts
     float: right;
     width: 20%;
 		text-align: right;
-		background: lighten($brand-first, 80);
+		background: lighten($basecolor-1, 80);
 		padding: .2rem .4rem;
 		box-sizing: border-box;
 
@@ -345,12 +352,12 @@ Posts
 
 		a {
 			color: #000;
-			background: lighten($brand-third, 40);
+			background: lighten($basecolor-3, 40);
 			padding: 2px 5px;
 			text-decoration: none;
 
 			&:hover {
-				background: lighten($brand-third, 30);
+				background: lighten($basecolor-3, 30);
 			}
 		}
 	}
@@ -362,7 +369,7 @@ Posts
 
   .topic-date {
     font-size: 80%;
-		color: lighten($brand-first-text, 40);
+		color: lighten($basecolor-1-text, 40);
 		display: inline;
 
  }
@@ -378,7 +385,7 @@ Posts
 		font-size: 80%;
 		position: relative;
 		padding-bottom: .2rem;
-		color: lighten($brand-first-text, 40%);
+		color: lighten($basecolor-1-text, 40%);
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -425,7 +432,7 @@ Posts
   }
 
 	.post-head {
-		border-bottom: 1px solid lighten($brand-first-text, 60%);
+		border-bottom: 1px solid lighten($basecolor-1-text, 60%);
 
 		.unread {
 			display: inline;

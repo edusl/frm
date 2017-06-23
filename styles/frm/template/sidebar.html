@@ -15,9 +15,17 @@
 				<!-- EVENT navbar_header_username_prepend -->
 				<p class="sidebar__nick"><strong>{CURRENT_USERNAME_SIMPLE}</strong></p>
 				<!-- EVENT navbar_header_username_append -->
+			</div>
+		<!-- ELSE -->
+			<div class="sidebar__avatar">
+
+				<svg role="img" class="sidebar__avatar--no" title="Sin avatar"><use xlink:href="images/svg/dist/svg-symbols.svg#user"></use></svg>
+				<p><a href="" class="btn btn--primary">{L_FREE_SIGNUP}</a></p>
+
 
 			</div>
 		<!-- ENDIF -->
+
 	<!-- EVENT navbar_header_user_profile_append -->
 
 
@@ -41,7 +49,8 @@
 					</li> -->
 				<!-- ENDIF -->
 
-					<!-- EVENT navbar_header_profile_list_after -->
+
+				<!-- EVENT navbar_header_profile_list_after -->
 
 			<!-- IF S_DISPLAY_SEARCH -->
 				<!-- IF S_REGISTERED_USER -->
@@ -170,7 +179,7 @@
 	<div id="search-box" class="search-box" role="search">
 		<form action="{U_SEARCH}" method="get" id="search" class="search">
 		<fieldset>
-			<input name="keywords" id="keywords" type="search" maxlength="128" title="{L_SEARCH_KEYWORDS}" class="search__input" size="20" value="{SEARCH_WORDS}" placeholder="{L_SEARCH_MINI}" />
+			<input name="keywords" id="keywords" type="search" maxlength="32" title="{L_SEARCH_KEYWORDS}" class="input search__input" size="20" value="{SEARCH_WORDS}" placeholder="{L_SEARCH_MINI}" />
 			<button class="search__button invisible" type="submit" title="{L_SEARCH}">
 				<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">{L_SEARCH}</span>
 			</button>
@@ -183,9 +192,5 @@
 	</div>
 	<!-- ENDIF -->
 	<!-- EVENT overall_header_searchbox_after -->
-
-	<div class="time-box">
-		<!-- IF S_USER_LOGGED_IN --><p>{LAST_VISIT_DATE}<p><!-- ENDIF -->
-	</div>
 
 </div><!-- sidebar --->

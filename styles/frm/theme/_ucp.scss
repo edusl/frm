@@ -21,7 +21,7 @@
 }
 
 .panel__inner {
-  background: $brand-second;
+  background: $basecolor-2;
   padding: 1rem;
   overflow: hidden;
 
@@ -29,6 +29,8 @@
 
 .cp-menu {
   margin-bottom: 1rem;
+  font-size: rem(14);
+
 
   .navigation {
     li {
@@ -38,6 +40,7 @@
 }
 
 .cp-main {
+  font-size: rem(15);
 }
 
 .menu-mobile {
@@ -61,13 +64,13 @@
     }
 
     .cp-menu {
-      width: 15%;
+      width: 20%;
       float: left;
     //  border: 1px solid pink;
     }
 
     .cp-main {
-      width: 85%;
+      width: 80%;
       float: right;
     }
   }

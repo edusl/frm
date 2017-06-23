@@ -212,7 +212,7 @@ $lang = array_merge($lang, array(
 	'EMAIL'								=> 'Email', // Short form for EMAIL_ADDRESS
 	'EMAIL_ADDRESS'						=> 'Dirección de correo electrónico',
 	'EMAIL_INVALID_EMAIL'				=> 'La dirección de correo electrónico que has introducido no es válida.',
-	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Se produjeron problemas enviando email en la <strong>línea %1$s</strong>. Respuesta: %2$s',	
+	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Se produjeron problemas enviando email en la <strong>línea %1$s</strong>. Respuesta: %2$s',
 	'EMPTY_SUBJECT'	=> 'Debes especificar un asunto cuando publiques un nuevo tema.',
 	'EMPTY_MESSAGE_SUBJECT'	=> 'Tienes que especificar un asunto cuando redactes un nuevo mensaje.',
 	'ENABLED'	=> 'Habilitado',
@@ -261,7 +261,7 @@ $lang = array_merge($lang, array(
 	'FROM'	=> 'de',
 	'FSOCK_DISABLED'	=> 'No se puede completar la operación porque las funciones fsock han sido deshabilitadas o el servidor no está disponible.',
 	'FSOCK_TIMEOUT'			=> 'Se agotó el tiempo de lectura de la corriente de red.',
-	
+
 	'FTP_FSOCK_HOST'	=> 'Servidor FTP Fsock',
 	'FTP_FSOCK_HOST_EXPLAIN'	=> 'Servidor FTP Fsock empleado para conectar a tu sitio',
 	'FTP_FSOCK_PASSWORD'	=> 'Contraseña FTP Fsock',
@@ -288,7 +288,7 @@ $lang = array_merge($lang, array(
 	'FTP_USERNAME'	=> 'Usuario FTP',
 	'FTP_USERNAME_EXPLAIN'	=> 'Usuario para identificarse en tu servidor FTP',
 
-	'GENERAL_ERROR'	=> 'Error General',	
+	'GENERAL_ERROR'	=> 'Error General',
 	'GB'	=> 'GB',
 	'GIB'	=> 'GiB',
 	'GO'	=> 'Ir',
@@ -584,7 +584,7 @@ $lang = array_merge($lang, array(
     	'POST_DELETED_ACTION'	=> 'Mensaje borrado:',
     	'POST_DELETED'			=> 'Este mensaje ha sido borrado.',
 	'POST_DELETED_BY'		=> '<strong>%2$s</strong> borró mensaje de <strong>%1$s</strong> el %3$s.',
-	'POST_DELETED_BY_REASON'=> '<strong>%2$s</strong> borró mensaje de <strong>%1$s</strong> el %3$s por la siguiente razón: %4$s',	
+	'POST_DELETED_BY_REASON'=> '<strong>%2$s</strong> borró mensaje de <strong>%1$s</strong> el %3$s por la siguiente razón: %4$s',
 	'POST_DETAILS'			=> 'Detalles del mensaje',
 	'POST_NEW_TOPIC'		=> 'Nuevo tema',
 	'POST_PCT'				=> '%.2f%% de todos los mensajes',
@@ -1424,4 +1424,6 @@ $lang = array_merge($lang, array(
 	// Translators should change this if a the usual date format is different
 	'default_dateformat'	=> 'D, d M Y, H:i', // Mié, 10 Mar 2010, 23:26
 
+
+	'FREE_SIGNUP'			=> 'Quiero registrarme.',
 ));

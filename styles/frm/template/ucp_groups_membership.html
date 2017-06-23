@@ -29,7 +29,7 @@
 				<dt>
 					<div class="list-inner">
 						<!-- IF S_CHANGE_DEFAULT --><input title="{L_CHANGE_DEFAULT_GROUP}" type="radio" name="default"<!-- IF leader.S_GROUP_DEFAULT --> checked="checked"<!-- ENDIF --> value="{leader.GROUP_ID}" /> <!-- ENDIF -->
-						<a href="{leader.U_VIEW_GROUP}" class="forumtitle"<!-- IF leader.GROUP_COLOUR --> style="color:#{leader.GROUP_COLOUR}"<!-- ENDIF -->>{leader.GROUP_NAME}</a>
+						<a href="{leader.U_VIEW_GROUP}" class="group-title"<!-- IF leader.GROUP_COLOUR --> style="color:#{leader.GROUP_COLOUR}"<!-- ENDIF -->>{leader.GROUP_NAME}</a>
 						<!-- IF leader.GROUP_DESC --><br />{leader.GROUP_DESC}<!-- ENDIF -->
 						<!-- IF not leader.GROUP_SPECIAL --><br /><i>{leader.GROUP_STATUS}</i><!-- ENDIF -->
 					</div>
@@ -61,7 +61,7 @@
 				<dt>
 					<div class="list-inner">
 						<!-- IF S_CHANGE_DEFAULT --><input title="{L_CHANGE_DEFAULT_GROUP}" type="radio" name="default"<!-- IF member.S_GROUP_DEFAULT --> checked="checked"<!-- ENDIF --> value="{member.GROUP_ID}" /> <!-- ENDIF -->
-						<a href="{member.U_VIEW_GROUP}" class="forumtitle"<!-- IF member.GROUP_COLOUR --> style="color:#{member.GROUP_COLOUR}"<!-- ENDIF -->>{member.GROUP_NAME}</a>
+						<a href="{member.U_VIEW_GROUP}" class="group-title"<!-- IF member.GROUP_COLOUR --> style="color:#{member.GROUP_COLOUR}"<!-- ENDIF -->>{member.GROUP_NAME}</a>
 						<!-- IF member.GROUP_DESC --><br />{member.GROUP_DESC}<!-- ENDIF -->
 						<!-- IF not member.GROUP_SPECIAL --><br /><i>{member.GROUP_STATUS}</i><!-- ENDIF -->
 					</div>
@@ -96,7 +96,7 @@
 			<dl>
 				<dt>
 					<div class="list-inner">
-						<a href="{pending.U_VIEW_GROUP}" class="forumtitle"<!-- IF pending.GROUP_COLOUR --> style="color:#{pending.GROUP_COLOUR}"<!-- ENDIF -->>{pending.GROUP_NAME}</a>
+						<a href="{pending.U_VIEW_GROUP}" class="group-title"<!-- IF pending.GROUP_COLOUR --> style="color:#{pending.GROUP_COLOUR}"<!-- ENDIF -->>{pending.GROUP_NAME}</a>
 						<!-- IF pending.GROUP_DESC --><br />{pending.GROUP_DESC}<!-- ENDIF -->
 						<!-- IF not pending.GROUP_SPECIAL --><br /><i>{pending.GROUP_STATUS}</i><!-- ENDIF -->
 					</div>
@@ -130,7 +130,7 @@
 			<dl>
 				<dt>
 					<div class="list-inner">
-						<a href="{nonmember.U_VIEW_GROUP}" class="forumtitle"<!-- IF nonmember.GROUP_COLOUR --> style="color:#{nonmember.GROUP_COLOUR}"<!-- ENDIF -->>{nonmember.GROUP_NAME}</a>
+						<a href="{nonmember.U_VIEW_GROUP}" class="group-title"<!-- IF nonmember.GROUP_COLOUR --> style="color:#{nonmember.GROUP_COLOUR}"<!-- ENDIF -->>{nonmember.GROUP_NAME}</a>
 						<!-- IF nonmember.GROUP_DESC --><br />{nonmember.GROUP_DESC}<!-- ENDIF -->
 						<!-- IF not nonmember.GROUP_SPECIAL --><br /><i>{nonmember.GROUP_STATUS}</i><!-- ENDIF -->
 					</div>

@@ -29,17 +29,19 @@
 	<!-- IF S_DISPLAY_JUMPBOX -->
 	<div class="jumpbox dropdown-container dropdown-container-right<!-- IF not S_IN_MCP --> dropdown-up<!-- ENDIF --> dropdown-{S_CONTENT_FLOW_BEGIN} dropdown-button-control" id="jumpbox">
 				<!-- IF S_IN_MCP and S_MERGE_SELECT -->{L_SELECT_TOPICS_FROM}<!-- ELSEIF S_IN_MCP -->{L_MODERATE_FORUM}<!-- ELSE -->{L_JUMP_TO}<!-- ENDIF -->
+
+				<div class="dropdown">
+					<select class="dropdown-contents combo">
+						<!-- BEGIN jumpbox_forums -->
+						<!-- IF jumpbox_forums.FORUM_ID neq -1 -->
+						<option value="{jumpbox_forums.LINK}" class="<!-- IF jumpbox_forums.level -->jumpbox-sub-link<!-- ELSEIF jumpbox_forums.S_IS_CAT -->jumpbox-cat-link<!-- ELSE -->jumpbox-forum-link<!-- ENDIF -->"><!-- BEGIN level -->----<!-- END level --> <span><!-- IF jumpbox_forums.level --> &#8627; &nbsp;<!-- ENDIF --> {jumpbox_forums.FORUM_NAME}</span></option>
+						<!-- ENDIF -->
+						<!-- END jumpbox_forums -->
+					</select>
+				</div>
+
 				<input type="submit" value="<!-- IF S_IN_MCP and S_MERGE_SELECT -->{L_SELECT_TOPICS_FROM}<!-- ELSEIF S_IN_MCP -->{L_MODERATE_FORUM}<!-- ELSE -->{L_JUMP_TO}<!-- ENDIF -->" class="btn btn--primary">
 
-		<div class="dropdown">
-			<select class="dropdown-contents combo">
-				<!-- BEGIN jumpbox_forums -->
-				<!-- IF jumpbox_forums.FORUM_ID neq -1 -->
-				<option value="{jumpbox_forums.LINK}" class="<!-- IF jumpbox_forums.level -->jumpbox-sub-link<!-- ELSEIF jumpbox_forums.S_IS_CAT -->jumpbox-cat-link<!-- ELSE -->jumpbox-forum-link<!-- ENDIF -->"><!-- BEGIN level -->----<!-- END level --> <span><!-- IF jumpbox_forums.level --> &#8627; &nbsp;<!-- ENDIF --> {jumpbox_forums.FORUM_NAME}</span></option>
-				<!-- ENDIF -->
-				<!-- END jumpbox_forums -->
-			</select>
-		</div>
 	</div>
 
 	<!-- ELSE -->

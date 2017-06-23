@@ -4,15 +4,14 @@
 
 
 // Brand colors
-$brand-first	            : #272822 !default;
-$brand-second		          : #dddddd !default;
-$brand-third		          : #FFCB0A !default;
-$brand-fourth							: #214780 !default;
-//$brand-fith							: #5D2294;
-$brand-fith								: #212737;
+$basecolor-1	            : #272822 !default;
+$basecolor-2		          : #dddddd !default;
+$basecolor-3		          : #FFCB0A !default;
+$basecolor-4							: #214780 !default;
+$basecolor-5							: #212737;
 
-$brand-first-text       	: #333333 !default;
-$brand-second-text     		: #ffffff !default;
+$basecolor-1-text       	: #333333 !default;
+$basecolor-2-text     		: #ffffff !default;
 
 $color-ok									: #00C120;
 $color-error							: #AC1C39;
@@ -21,18 +20,18 @@ $color-info								: #4B8DFD;
 
 
 // Links
-$link-color               : $brand-fourth !default;
+$link-color               : $basecolor-4 !default;
 $link-hover-color         : false !default;
 $link-active-color        : false !default;
 $link-visited-color       : false !default;
 $link-focus-color         : false !default;
 
 // Text
-$selection-text-color-bg  : $brand-second !default;
-$selection-text-color     : invert($brand-first) !default;
+$selection-text-color-bg  : $basecolor-2 !default;
+$selection-text-color     : invert($basecolor-1) !default;
 
 // Typography
-$font-family-base         : "Open Sans", Helvetica, Sans-serif !default;
+$font-family-base         : 'Roboto', sans-serif;
 $font-family-custom				: 'Yanone Kaffeesatz', sans-serif;
 $size-base           			: 16px !default;
 $line-height-base         : 22px !default;
@@ -45,9 +44,9 @@ $body-bg                  : white !default;
 $body-color               : #8F908A !default;
 
 // Print
-$print-text-color         : $brand-first !default;
-$print-link-visited-color : $brand-first  !default;
-$print-border-color       : $brand-second !default;
+$print-text-color         : $basecolor-1 !default;
+$print-link-visited-color : $basecolor-1  !default;
+$print-border-color       : $basecolor-2 !default;
 $print-page-margin        : 0.5cm !default;
 
 // Form
@@ -62,14 +61,13 @@ $input-border							: #ccc;
 
 /* Define your base font-size here; most elements will inherit this. _NO__DOTCOMMA__AFTER__*/
 html {
-	font-size: $size-base; /* Assuming 16px... */
 	line-height: $line-height-base; /* 24px (This is now our magic number; all subsequent margin-bottoms and line-heights want to be a multiple of this number in order to maintain vertical rhythm.) _NO__DOTCOMMA__AFTER__*/
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 body {
 	font-family: $font-family-base;
-	color: $brand-first;
+	color: $basecolor-1;
 	background: $body-bg;
 }
 

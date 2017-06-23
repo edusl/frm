@@ -447,14 +447,12 @@ textarea {
 -------------------------------------------------------------- */
 /* Define your base font-size here; most elements will inherit this. _NO__DOTCOMMA__AFTER__*/
 html {
-  font-size: 16px;
-  /* Assuming 16px... */
   line-height: 22px;
   /* 24px (This is now our magic number; all subsequent margin-bottoms and line-heights want to be a multiple of this number in order to maintain vertical rhythm.) _NO__DOTCOMMA__AFTER__*/
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: "Open Sans", Helvetica, Sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #272822;
   background: white; }
 
@@ -566,7 +564,6 @@ select {
 
 label {
   display: block;
-  font-weight: 700;
   margin-bottom: 5px; }
 
 fieldset dl {
@@ -576,7 +573,8 @@ fieldset dl {
   padding: .4rem .8rem;
   border: none;
   cursor: pointer;
-  display: inline-block; }
+  display: inline-block;
+  transition: .3s ease; }
 
 .btn:hover {
   text-decoration: none; }
@@ -607,6 +605,9 @@ fieldset dl {
 /* --------------------------------------------------------------
 	$Tabs
 -------------------------------------------------------------- */
+.tabs {
+  font-size: 0.875rem; }
+
 .tabs__item {
   display: inline-block; }
 
@@ -884,7 +885,8 @@ footer {
 	$Sidebar
 -------------------------------------------------------------- */
 .sidebar {
-  background: #f2f2f2;
+  background: white;
+  border-top: 4px solid #FFCB0A;
   height: 100%;
   width: 17rem;
   margin-left: -17rem;
@@ -894,6 +896,7 @@ footer {
   transition: margin-left .5s;
   z-index: 10;
   top: 0;
+  font-size: .8rem;
   overflow-y: scroll; }
 
 .sidebar::-webkit-scrollbar {
@@ -921,7 +924,7 @@ footer {
   margin-bottom: .5rem; }
 
 .sidebar__avatar .sidebar__avatar--no {
-  fill: #214780;
+  fill: #e6e6e6;
   width: 128px;
   height: 128px; }
 
@@ -1021,23 +1024,28 @@ footer {
 	$Search box
 -------------------------------------------------------------- */
 .search-box {
-  font-size: .8rem;
-  display: none;
-  padding: 0 .75rem 0 .5rem;
-  float: left; }
-
-.search-box .input {
-  padding: 5px 10px; }
-
-@media (min-width: 768px) {
-  .search-box {
-    display: inline-block; } }
+  padding: 0 .75rem 0 .5rem; }
 
 .search__input {
   width: 100%;
   border: none;
-  padding: .5rem;
-  background: white; }
+  display: none;
+  padding: 10px 5px 3px 0;
+  margin-bottom: 5px;
+  border-bottom: 2px solid #eee;
+  font-size: 0.875rem;
+  outline: none;
+  transition: .5s all;
+  height: 2.4rem; }
+
+.search__input:focus {
+  font-size: 180%;
+  color: #000;
+  border-bottom: 3px solid #FFCB0A; }
+
+@media (min-width: 768px) {
+  .search__input {
+    display: inline-block; } }
 
 .search__button {
   position: absolute;
@@ -1045,7 +1053,7 @@ footer {
 
 .search__link {
   font-size: .75rem;
-  color: #FFCB0A; }
+  color: #214780; }
 
 .open__menu {
   fill: #dddddd;
@@ -1122,20 +1130,11 @@ footer {
 /* --------------------------------------------------------------
 	$Online list
 -------------------------------------------------------------- */
-.online-list {
+.block {
   background-color: #dddddd;
-  padding: 1rem;
-  margin-bottom: 1rem; }
-
-.birthday-list {
-  background-color: #dddddd;
-  padding: 1rem;
-  margin-bottom: 1rem; }
-
-.statistics {
-  background-color: #dddddd;
-  padding: 1rem;
-  margin-bottom: 1rem; }
+  padding: 15px;
+  margin-bottom: 15px;
+  font-size: 0.8125rem; }
 
 /* --------------------------------------------------------------
 	$Login
@@ -1160,7 +1159,8 @@ footer {
   margin-bottom: 1rem; }
 
 .action-bar {
-  font-size: .9rem;
+  text-align: right;
+  font-size: 0.8125rem;
   border: 1px solid red;
   margin-bottom: 1rem;
   overflow: hidden; }
@@ -1216,6 +1216,15 @@ footer {
 
 .jumpbox-return {
   margin-bottom: 1rem; }
+
+.jumpbox {
+  text-align: right; }
+
+.jumpbox .dropdown {
+  display: inline; }
+
+.jumpbox select {
+  display: inline; }
 
 /* --------------------------------------------------------------
 	$Messages
@@ -1305,9 +1314,6 @@ footer {
 -------------------------------------------------------------- */
 #navigation {
   border: 1px solid red; }
-
-#navigation li {
-  font-size: 0.75rem; }
 
 /* LINKS */
 /* --------------------------------------------------------------
@@ -1422,6 +1428,9 @@ Posts
 .postprofile .avatar {
   display: inline-block; }
 
+.postprofile dd {
+  font-size: 0.8125rem; }
+
 .search .h3 {
   margin-bottom: 0; }
 
@@ -1468,6 +1477,9 @@ Posts
 .avatar-container .avatar {
   max-width: 64px;
   max-height: 64px; }
+
+.nick-container {
+  margin-bottom: 15px; }
 
 .nick-container a {
   font-weight: bold; }
@@ -1576,7 +1588,8 @@ Posts
   opacity: 1; }
 
 .content {
-  padding: .5rem 0; }
+  padding: .5rem 0;
+  font-size: .9rem; }
 
 /* --------------------------------------------------------------
 	$Topic list
@@ -1779,10 +1792,14 @@ Posts
   overflow: hidden; }
 
 .cp-menu {
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  font-size: 0.875rem; }
 
 .cp-menu .navigation li {
   margin-bottom: .5rem; }
+
+.cp-main {
+  font-size: 0.9375rem; }
 
 .menu-mobile {
   width: 100%;
@@ -1797,10 +1814,10 @@ Posts
   .menu-desktop {
     display: block; }
   .cp-menu {
-    width: 15%;
+    width: 20%;
     float: left; }
   .cp-main {
-    width: 85%;
+    width: 80%;
     float: right; } }
 
 /*iouhiuh

@@ -44,7 +44,7 @@
 <!-- EVENT index_body_stat_blocks_before -->
 
 <!-- IF S_DISPLAY_ONLINE_LIST -->
-	<div class="stat-block online-list">
+	<div class="block online-list">
 		<!-- IF U_VIEWONLINE --><h3 class="h3"><a href="{U_VIEWONLINE}">{L_WHO_IS_ONLINE}</a></h3><!-- ELSE --><h3 class="h3">{L_WHO_IS_ONLINE}</h3><!-- ENDIF -->
 		<p>
 			<!-- EVENT index_body_block_online_prepend -->
@@ -56,7 +56,7 @@
 <!-- ENDIF -->
 
 <!-- IF S_DISPLAY_BIRTHDAY_LIST -->
-	<div class="stat-block birthday-list">
+	<div class="block birthday-list">
 		<h3 class="h3">{L_BIRTHDAYS}</h3>
 		<p>
 			<!-- EVENT index_body_block_birthday_prepend -->
@@ -67,7 +67,7 @@
 <!-- ENDIF -->
 
 <!-- IF NEWEST_USER -->
-	<div class="stat-block statistics">
+	<div class="block statistics">
 		<h3 class="h3">{L_STATISTICS}</h3>
 		<p>
 			<!-- EVENT index_body_block_stats_prepend -->
