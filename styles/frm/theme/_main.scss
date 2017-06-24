@@ -4,11 +4,11 @@
 
 header {
   .header {
-    //background: $basecolor-5;
-    background:#666;
+    background: lighten($basecolor-1, 5%);
+
     width: 100%;
     position: fixed;
-    z-index: 7;
+    //z-index: 7;
     top: 0;
     font-size: .75em;
 
@@ -35,7 +35,6 @@ header {
     width: 24px;
     height: 24px;
     fill: white;
-    margin: 0 1em;
     cursor: pointer;
     display: block;
   }
@@ -43,11 +42,22 @@ header {
     .header__description {
       display: flex;
       align-items: center;
+      padding-left: 15px;
+
+      .header__openmenu {
+
+      }
     }
+
+      .open-sidebar {
+        border: 1px solid red;
+        display: block;
+      }
 
       .header__title {
         font-family: $font-family-custom;
         font-size: rem(36);
+        margin-left: 15px;
 
         .logo {
           color: $basecolor-2-text;
@@ -213,7 +223,7 @@ main {
   }
 
 footer {
-  background: darken($basecolor-5, 1%);
+  //background: darken($basecolor-5, 1%);
 
 }
 
@@ -490,8 +500,7 @@ footer {
 -------------------------------------------------------------- */
 
 .footer {
-  background: darken($basecolor-5, 5%);
-  box-shadow: 0 4px 16px #000;
+  background: lighten($basecolor-1, 5%);
   font-size: .875em;
   max-width: 1440px;
   margin: 0 auto;
@@ -504,8 +513,7 @@ footer {
 }
 
   .footer__inner {
-    border-top: 15px solid $basecolor-3;
-    padding: 1rem;
+    padding: 15px;
   }
 
   .footer-nav {

@@ -711,10 +711,9 @@ fieldset dl {
 	$Main
 -------------------------------------------------------------- */
 header .header {
-  background: #666;
+  background: #34362e;
   width: 100%;
   position: fixed;
-  z-index: 7;
   top: 0;
   font-size: .75em; }
 
@@ -740,7 +739,6 @@ header .header a {
   width: 24px;
   height: 24px;
   fill: white;
-  margin: 0 1em;
   cursor: pointer;
   display: block; }
 
@@ -750,11 +748,17 @@ header .header a {
   display: flex;
   -webkit-align-items: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  padding-left: 15px; }
+
+.open-sidebar {
+  border: 1px solid red;
+  display: block; }
 
 .header__title {
   font-family: "Yanone Kaffeesatz", sans-serif;
-  font-size: 2.25rem; }
+  font-size: 2.25rem;
+  margin-left: 15px; }
 
 .header__title .logo {
   color: #ffffff; }
@@ -870,9 +874,6 @@ main {
     margin-top: 3.125rem; }
   .showcookies main {
     margin-top: 7rem; } }
-
-footer {
-  background: #1f2534; }
 
 @media only screen and (max-width: 500px) {
   .top-header {
@@ -1079,8 +1080,7 @@ footer {
 	$Page footer
 -------------------------------------------------------------- */
 .footer {
-  background: #171c27;
-  box-shadow: 0 4px 16px #000;
+  background: #34362e;
   font-size: .875em;
   max-width: 1440px;
   margin: 0 auto;
@@ -1090,8 +1090,7 @@ footer {
   color: #ffeba3; }
 
 .footer__inner {
-  border-top: 15px solid #FFCB0A;
-  padding: 1rem; }
+  padding: 15px; }
 
 .footer-nav {
   margin-bottom: 1rem; }
